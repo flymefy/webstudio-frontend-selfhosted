@@ -50,8 +50,14 @@ function detectComponents(): string[] {
       "**/*.ws.ts",
     ],
   });
+  // Exclude dashboard components entirely for now
+  const nonDashboard = files.filter(
+    (f) =>
+      f.includes(`${path.sep}components${path.sep}dashboard${path.sep}`) ===
+      false
+  );
   // Filter out modules importing css/scss and ensure default export exists
-  const filtered = files.filter((file) => {
+  const filtered = nonDashboard.filter((file) => {
     try {
       const src = readFileSync(file, "utf8");
       const hasStyleImport =
