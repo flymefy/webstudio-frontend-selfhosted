@@ -1,7 +1,26 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync, readFileSync } from "node:fs";
 import path from "node:path";
 import fg from "fast-glob";
-import { paramCase, pascalCase } from "change-case";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function pascalCase(input: string) {
+  return input
+    .replace(/[-_]+/g, " ")
+    .replace(/\s+(.)/g, (_, c) => c.toUpperCase())
+    .replace(/^(.)/, (_, c) => c.toUpperCase())
+    .replace(/\W/g, "");
+}
+
+function paramCase(input: string) {
+  return input
+    .replace(/([a-z])([A-Z])/g, "$1-$2")
+    .replace(/\s+/g, "-")
+    .replace(/_+/g, "-")
+    .toLowerCase();
+}
 
 const vendorRoot = path.resolve(__dirname, "vendor", "frontend-nextjs");
 const vendorComponentsDirs = [
@@ -20,13 +39,43 @@ function detectComponents(): string[] {
   }
   const patterns = vendorComponentsDirs
     .filter((dir) => existsSync(dir))
-    .map((dir) => `${dir}/**/*.{tsx,ts}`);
+    .map((dir) => `${dir}/**/*.tsx`);
   if (patterns.length === 0) return [];
   const files = fg.sync(patterns, {
     dot: false,
-    ignore: ["**/*.test.*", "**/*.stories.*", "**/*.ws.ts"],
+    ignore: [
+      "**/*.test.*",
+      "**/*.stories.*",
+      "**/__generated__/**",
+      "**/*.ws.ts",
+    ],
   });
-  return files;
+  // Filter out modules importing css/scss and ensure default export exists
+  const filtered = files.filter((file) => {
+    try {
+      const src = readFileSync(file, "utf8");
+      const hasStyleImport =
+        /import\s+[^;]*['\"]([^'\"]+\.(css|scss))['\"]/m.test(src);
+      const hasDefault = /export\s+default\s+/m.test(src);
+      const importsSecurityModal = /securitySettingsModal/i.test(src);
+      const importsPhoneCss =
+        /react-phone-number-input\s*\/\s*style\.css/i.test(src);
+      const importsRRD = /from\s+['\"]react-router-dom['\"]/m.test(src);
+      const importsNext =
+        /from\s+['\"]next\//m.test(src) || /from\s+['\"]next['\"]/m.test(src);
+      return (
+        hasStyleImport === false &&
+        hasDefault === true &&
+        !importsSecurityModal &&
+        !importsPhoneCss &&
+        !importsRRD &&
+        !importsNext
+      );
+    } catch {
+      return false;
+    }
+  });
+  return filtered;
 }
 
 function relativeFromPrivateSrc(absPath: string) {
@@ -39,13 +88,13 @@ function generateComponentsIndex(componentFiles: string[]) {
     const basename = path.basename(file, path.extname(file));
     const compName = pascalCase(basename);
     const rel = relativeFromPrivateSrc(file);
-    lines.push(`export { ${compName} } from "./${rel}";`);
+    lines.push(`export { default as ${compName} } from "./${rel}";`);
   }
   const dest = path.join(outDir, "components.ts");
   mkdirSync(path.dirname(dest), { recursive: true });
   writeFileSync(dest, lines.join("\n") + "\n");
   return lines
-    .map((l) => l.match(/export \{ (\w+) \}/)?.[1])
+    .map((l) => l.match(/default as\s+(\w+)/)?.[1])
     .filter(Boolean) as string[];
 }
 
