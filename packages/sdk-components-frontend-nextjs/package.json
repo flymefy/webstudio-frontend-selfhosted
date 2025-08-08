@@ -35,8 +35,9 @@
     }
   },
   "scripts": {
+    "prepare:vendor": "tsx ./private-src/register-from-vendor.ts",
     "build": "vite build --config ../../vite.sdk-components.config.ts",
-    "build:args": "NODE_OPTIONS=--conditions=webstudio generate-arg-types './private-src/*.tsx !./private-src/*.stories.tsx !./private-src/*.ws.ts !./private-src/*.template.tsx' && prettier --write \"**/*.props.ts\"",
+    "build:args": "NODE_OPTIONS=--conditions=webstudio generate-arg-types './private-src/**/*.tsx !./private-src/**/*.stories.tsx !./private-src/**/*.ws.ts !./private-src/**/*.template.tsx' && prettier --write \"**/*.props.ts\"",
     "build:stories": "webstudio-sdk generate-stories && prettier --write \"private-src/__generated__/*.stories.tsx\"",
     "dts": "tsc --project tsconfig.dts.json",
     "typecheck": "tsc"
@@ -56,6 +57,9 @@
     "@webstudio-is/sdk-cli": "workspace:^",
     "@webstudio-is/template": "workspace:*",
     "@webstudio-is/tsconfig": "workspace:*",
+    "fast-glob": "^3.3.2",
+    "change-case": "^5.4.4",
+    "tsx": "^4.19.3",
     "react": "18.3.0-canary-14898b6a9-20240318",
     "react-dom": "18.3.0-canary-14898b6a9-20240318",
     "vite": "^6.3.4"
