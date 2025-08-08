@@ -4,6 +4,9 @@
   "private": true,
   "description": "Webstudio Builder UI as a service",
   "type": "module",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
     "prebuild": "which remix",
     "build": "remix vite:build",
@@ -80,6 +83,8 @@
     "@webstudio-is/sdk-components-animation": "workspace:*",
     "@webstudio-is/sdk-components-react": "workspace:*",
     "@webstudio-is/sdk-components-react-radix": "workspace:*",
+    "@webstudio-is/sdk-components-react-remix": "workspace:*",
+    "@webstudio-is/sdk-components-react-router": "workspace:*",
     "@webstudio-is/template": "workspace:*",
     "@webstudio-is/trpc-interface": "workspace:*",
     "args-tokenizer": "^0.3.0",
