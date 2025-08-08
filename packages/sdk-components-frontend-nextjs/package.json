@@ -1,0 +1,63 @@
+{
+  "name": "@webstudio-is/sdk-components-frontend-nextjs",
+  "version": "0.0.0-webstudio-version",
+  "description": "Webstudio components for frontend-nextjs project",
+  "author": "Webstudio <github@webstudio.is>",
+  "homepage": "https://webstudio.is",
+  "license": "AGPL-3.0-or-later",
+  "private": false,
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "lib/*",
+    "!*.{test,stories}.*"
+  ],
+  "exports": {
+    ".": {
+      "webstudio": "./private-src/components.ts",
+      "types": "./lib/types/components.d.ts",
+      "import": "./lib/components.js"
+    },
+    "./metas": {
+      "webstudio": "./private-src/metas.ts",
+      "types": "./lib/types/metas.d.ts",
+      "import": "./lib/metas.js"
+    },
+    "./hooks": {
+      "webstudio": "./private-src/hooks.ts",
+      "types": "./lib/types/hooks.d.ts",
+      "import": "./lib/hooks.js"
+    },
+    "./templates": {
+      "webstudio": "./private-src/templates.ts",
+      "types": "./lib/types/templates.d.ts",
+      "import": "./lib/templates.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build --config ../../vite.sdk-components.config.ts",
+    "build:args": "NODE_OPTIONS=--conditions=webstudio generate-arg-types './private-src/*.tsx !./private-src/*.stories.tsx !./private-src/*.ws.ts !./private-src/*.template.tsx' && prettier --write \"**/*.props.ts\"",
+    "build:stories": "webstudio-sdk generate-stories && prettier --write \"private-src/__generated__/*.stories.tsx\"",
+    "dts": "tsc --project tsconfig.dts.json",
+    "typecheck": "tsc"
+  },
+  "peerDependencies": {
+    "react": "18.3.0-canary-14898b6a9-20240318",
+    "react-dom": "18.3.0-canary-14898b6a9-20240318"
+  },
+  "dependencies": {
+    "@webstudio-is/react-sdk": "workspace:*",
+    "@webstudio-is/sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.70",
+    "@types/react-dom": "^18.2.25",
+    "@webstudio-is/generate-arg-types": "workspace:*",
+    "@webstudio-is/sdk-cli": "workspace:^",
+    "@webstudio-is/template": "workspace:*",
+    "@webstudio-is/tsconfig": "workspace:*",
+    "react": "18.3.0-canary-14898b6a9-20240318",
+    "react-dom": "18.3.0-canary-14898b6a9-20240318",
+    "vite": "^6.3.4"
+  }
+}
