@@ -145,6 +145,13 @@ export default defineConfig(({ mode }) => {
             "node_modules/rc-slider"
           ),
         },
+        {
+          find: "react-icons",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/react-icons"
+          ),
+        },
       ],
     },
     ssr: {
