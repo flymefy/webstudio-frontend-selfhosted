@@ -25,6 +25,11 @@ const conditions = hasPrivateFolders
   ? ["webstudio-private", "webstudio"]
   : ["webstudio"];
 
+// Added: resolve HTTPS certs conditionally to avoid CI build errors
+const httpsKeyPath = path.resolve(__dirname, "../../https/privkey.pem");
+const httpsCertPath = path.resolve(__dirname, "../../https/fullchain.pem");
+const useLocalHttps = existsSync(httpsKeyPath) && existsSync(httpsCertPath);
+
 export default defineConfig(({ mode }) => {
   if (mode === "development") {
     // Enable self-signed certificates for development service 2 service fetch calls.
@@ -275,10 +280,12 @@ export default defineConfig(({ mode }) => {
       // Needed for SSL
       proxy: {},
 
-      https: {
-        key: readFileSync("../../https/privkey.pem"),
-        cert: readFileSync("../../https/fullchain.pem"),
-      },
+      https: useLocalHttps
+        ? {
+            key: readFileSync(httpsKeyPath),
+            cert: readFileSync(httpsCertPath),
+          }
+        : undefined,
       cors: ((
         req: IncomingMessage,
         callback: (error: Error | null, options: CorsOptions | null) => void
