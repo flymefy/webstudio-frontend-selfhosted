@@ -3,7 +3,7 @@
 
 import Image from '../../../../../../adapters/next-image';
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation } from "swiper";
+import { Navigation } from '../../../../../../adapters/swiper-core';
 import { testimonial2 } from "../../../data/testimonialData";
 
 const Testimonial = () => {

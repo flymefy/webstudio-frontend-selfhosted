@@ -3,7 +3,7 @@
 
 import carsData from "../../../data/cars";
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
 import Image from '../../../../../../adapters/next-image';
 import Link from '../../../../../../adapters/link';
 

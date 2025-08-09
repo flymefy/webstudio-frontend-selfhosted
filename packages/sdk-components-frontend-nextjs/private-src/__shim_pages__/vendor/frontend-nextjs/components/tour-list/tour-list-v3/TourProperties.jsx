@@ -3,7 +3,7 @@
 
 import Image from '../../../../../../adapters/next-image';
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
 import toursData from "../../../data/tours";
 import Link from '../../../../../../adapters/link';
 

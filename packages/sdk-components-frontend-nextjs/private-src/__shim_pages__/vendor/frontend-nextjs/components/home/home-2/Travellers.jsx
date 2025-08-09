@@ -2,7 +2,7 @@
 'use client'
 
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
 import { destinations3 } from "../../../data/desinations";
 import Link from '../../../../../../adapters/link';
 

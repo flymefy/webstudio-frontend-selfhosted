@@ -75,6 +75,11 @@ function transformSource(
     /from\s+["']swiper\/react["']/g,
     `from '${adapterPrefix}swiper-react'`
   );
+  // Adapt swiper core
+  src = src.replace(
+    /from\s+["']swiper["']/g,
+    `from '${adapterPrefix}swiper-core'`
+  );
   // Resolve @/ alias to vendor root relative
   src = src.replace(/from\s+["']@\/(.+?)["']/g, (_m, p1) => {
     return `from '${aliasPrefix}${p1}'`;

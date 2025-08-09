@@ -2,7 +2,7 @@
 'use client'
 
 import { Swiper, SwiperSlide } from '../../../../../adapters/swiper-react';
-import { Navigation } from "swiper";
+import { Navigation } from '../../../../../adapters/swiper-core';
 import { Gallery, Item } from "react-photoswipe-gallery";
 
 const SlideGallery = () => {

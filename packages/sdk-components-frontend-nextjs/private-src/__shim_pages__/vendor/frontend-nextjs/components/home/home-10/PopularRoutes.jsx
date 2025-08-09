@@ -4,7 +4,7 @@
 import Image from '../../../../../../adapters/next-image';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation } from "swiper";
+import { Navigation } from '../../../../../../adapters/swiper-core';
 import Link from '../../../../../../adapters/link';
 
 const PopularRoutes = () => {

@@ -4,7 +4,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Thumbs } from "swiper";
+import { Thumbs } from '../../../../../../adapters/swiper-core';
 import "swiper/css/thumbs";
 import { testimonial2 } from "../../../data/testimonialData";
 

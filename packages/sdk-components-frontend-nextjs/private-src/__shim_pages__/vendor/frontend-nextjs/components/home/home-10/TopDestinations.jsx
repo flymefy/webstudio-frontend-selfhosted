@@ -3,7 +3,7 @@
 
 import Link from '../../../../../../adapters/link';
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation } from "swiper";
+import { Navigation } from '../../../../../../adapters/swiper-core';
 import { destinations10 } from "../../../data/desinations";
 
 const TopDestinations = () => {

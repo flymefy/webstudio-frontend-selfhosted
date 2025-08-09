@@ -5,7 +5,7 @@ import Image from '../../../../../../adapters/next-image';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Scrollbar } from "swiper";
+import { Scrollbar } from '../../../../../../adapters/swiper-core';
 import { testimonial1 } from "../../../data/testimonialData";
 
 const Testimonial = () => {

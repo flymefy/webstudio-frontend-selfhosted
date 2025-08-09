@@ -3,7 +3,7 @@
 
 import Image from '../../../../../../adapters/next-image';
 import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
 import cruiseData from "../../../data/cruise";
 import isTextMatched from "../../../utils/isTextMatched";
 import Link from '../../../../../../adapters/link';

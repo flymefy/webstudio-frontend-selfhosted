@@ -5,7 +5,7 @@ import React, { useRef, useState } from "react";
 import { Gallery, Item } from "react-photoswipe-gallery";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from '../../../../../adapters/swiper-react';
-import { Thumbs, Navigation } from "swiper";
+import { Thumbs, Navigation } from '../../../../../adapters/swiper-core';
 import "swiper/css/thumbs";
 import Image from '../../../../../adapters/next-image';
 
