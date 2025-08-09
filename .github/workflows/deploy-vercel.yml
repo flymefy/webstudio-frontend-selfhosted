@@ -16,8 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Enable Corepack (pnpm)
-        run: corepack enable
+      - name: Setup PNPM (Corepack)
+        run: corepack enable && corepack prepare pnpm@9.14.4 --activate
 
       - name: Setup Node
         uses: actions/setup-node@v4
