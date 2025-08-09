@@ -62,7 +62,8 @@
     "react-multi-date-picker": "^4.5.1",
     "google-map-react": "^2.2.1",
     "react-modal-video": "^2.0.2",
-    "crypto-js": "^4.2.0"
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13"
   },
   "devDependencies": {
     "@types/react": "^18.2.70",

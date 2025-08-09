@@ -185,10 +185,53 @@ export default defineConfig(({ mode }) => {
           ),
         },
         {
-          find: "swiper",
+          find: /^swiper$/,
           replacement: path.resolve(
             __dirname,
             "app/shared/swiper-modules-shim.mjs"
+          ),
+        },
+        // Explicit aliases for Swiper deep module imports used by the shim
+        {
+          find: "swiper/modules/navigation.mjs",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/navigation.mjs"
+          ),
+        },
+        {
+          find: "swiper/modules/pagination.mjs",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/pagination.mjs"
+          ),
+        },
+        {
+          find: "swiper/modules/scrollbar.mjs",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/scrollbar.mjs"
+          ),
+        },
+        {
+          find: "swiper/modules/thumbs.mjs",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/thumbs.mjs"
+          ),
+        },
+        {
+          find: "swiper/modules/free-mode.mjs",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/free-mode.mjs"
+          ),
+        },
+        {
+          find: "swiper/modules/effect-cards.mjs",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/effect-cards.mjs"
           ),
         },
         {
@@ -322,6 +365,7 @@ export default defineConfig(({ mode }) => {
         "react-parallax",
         "react-photoswipe-gallery",
         "photoswipe",
+        "dayjs",
       ],
     },
   };
