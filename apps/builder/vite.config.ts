@@ -158,10 +158,7 @@ export default defineConfig(({ mode }) => {
         },
         {
           find: "rc-slider",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/rc-slider"
-          ),
+          replacement: path.resolve(__dirname, "node_modules/rc-slider"),
         },
         {
           find: "react-icons",
