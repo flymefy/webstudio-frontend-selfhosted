@@ -148,7 +148,8 @@
     "react-pro-sidebar": "^1.1.0",
     "react-phone-number-input": "^3.4.12",
     "react-tabs": "^6.1.0",
-    "antd": "^5.26.7"
+    "antd": "^5.26.7",
+    "dayjs": "^1.11.13"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.16.5",
