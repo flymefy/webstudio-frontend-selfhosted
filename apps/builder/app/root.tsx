@@ -10,7 +10,7 @@ import env from "./env/env.server";
 import { useSetFeatures } from "./shared/use-set-features";
 
 // Global vendor styles used by vendor pages/components
-import "react-toastify/dist/ReactToastify.css";
+import "/workspace/apps/builder/node_modules/react-toastify/dist/ReactToastify.css";
 import "aos/dist/aos.css";
 import "rc-slider/assets/index.css";
 import "slick-carousel/slick/slick.css";
