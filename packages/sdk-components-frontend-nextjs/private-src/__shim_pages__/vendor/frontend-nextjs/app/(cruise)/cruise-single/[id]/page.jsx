@@ -1,4 +1,4 @@
-import 'photoswipe/style.css';
+
 import cruiseData from '../../../../data/cruise';
 import Wrapper from '../../../../components/layout/Wrapper';
 import Overview from '../../../../components/cruise-single/Overview';

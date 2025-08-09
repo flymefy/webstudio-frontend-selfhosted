@@ -66,14 +66,18 @@ function transformSource(
     /from\s+["']react-router-dom["']/g,
     `from '${adapterPrefix}link'`
   );
-  // Migrate PhotoSwipe v4 CSS imports to v5 path
+  // Remove PhotoSwipe CSS imports (provided globally via vendor-styles.ts)
   src = src.replace(
-    /['\"]photoswipe\/dist\/photoswipe\.css['\"]/g,
-    `'photoswipe/style.css'`
+    /^\s*import\s+[^;]*['\"]photoswipe\/style\.css['\"];?\s*$/gim,
+    ""
   );
   src = src.replace(
-    /['\"]photoswipe\/dist\/default-skin\/default-skin\.css['\"]/g,
-    `'photoswipe/style.css'`
+    /^\s*import\s+[^;]*['\"]photoswipe\/dist\/photoswipe\.css['\"];?\s*$/gim,
+    ""
+  );
+  src = src.replace(
+    /^\s*import\s+[^;]*['\"]photoswipe\/dist\/default-skin\/default-skin\.css['\"];?\s*$/gim,
+    ""
   );
   // Preserve swiper/react, swiper, react-parallax, react-slick imports as-is
   // Resolve @/ alias to vendor root relative

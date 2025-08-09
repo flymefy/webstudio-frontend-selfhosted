@@ -1,4 +1,4 @@
-import 'photoswipe/style.css';
+
 import toursData from '../../../../data/tours';
 import Wrapper from '../../../../components/layout/Wrapper';
 import TopBreadCrumb from '../../../../components/tour-single/TopBreadCrumb';
