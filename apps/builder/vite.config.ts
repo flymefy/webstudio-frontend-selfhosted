@@ -165,6 +165,17 @@ export default defineConfig(({ mode }) => {
           find: "aos",
           replacement: path.resolve(__dirname, "node_modules/aos"),
         },
+        {
+          find: "slick-carousel",
+          replacement: path.resolve(__dirname, "node_modules/slick-carousel"),
+        },
+        {
+          find: "react-phone-number-input",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-phone-number-input"
+          ),
+        },
       ],
     },
     ssr: {
