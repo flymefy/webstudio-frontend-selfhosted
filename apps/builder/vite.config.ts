@@ -145,6 +145,15 @@ export default defineConfig(({ mode }) => {
             "node_modules/react-pro-sidebar"
           ),
         },
+        // Force resolve swiper from this app's node_modules to avoid workspace root lookup
+        {
+          find: "swiper/react",
+          replacement: path.resolve(__dirname, "node_modules/swiper/react"),
+        },
+        {
+          find: "swiper",
+          replacement: path.resolve(__dirname, "node_modules/swiper"),
+        },
       ],
     },
     ssr: {
