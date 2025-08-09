@@ -146,7 +146,8 @@
     "rc-slider": "^10.5.0",
     "react-toastify": "^10.0.6",
     "react-pro-sidebar": "^1.1.0",
-    "react-phone-number-input": "^3.4.12"
+    "react-phone-number-input": "^3.4.12",
+    "react-tabs": "^6.1.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.16.5",
