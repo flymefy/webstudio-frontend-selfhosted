@@ -248,6 +248,13 @@ export default defineConfig(({ mode }) => {
             "node_modules/antd/dist/reset.css"
           ),
         },
+        {
+          find: "rc-slider/assets/index.css",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/rc-slider/assets/index.css"
+          ),
+        },
       ],
     },
     ssr: {
