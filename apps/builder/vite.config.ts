@@ -90,35 +90,35 @@ export default defineConfig(({ mode }) => {
           find: "swiper/css/navigation",
           replacement: path.resolve(
             __dirname,
-            "node_modules/swiper/swiper.css"
+            "node_modules/swiper/modules/navigation.css"
           ),
         },
         {
           find: "swiper/css/pagination",
           replacement: path.resolve(
             __dirname,
-            "node_modules/swiper/swiper.css"
+            "node_modules/swiper/modules/pagination.css"
           ),
         },
         {
           find: "swiper/css/scrollbar",
           replacement: path.resolve(
             __dirname,
-            "node_modules/swiper/swiper.css"
+            "node_modules/swiper/modules/scrollbar.css"
           ),
         },
         {
           find: "swiper/css/thumbs",
           replacement: path.resolve(
             __dirname,
-            "node_modules/swiper/swiper.css"
+            "node_modules/swiper/modules/thumbs.css"
           ),
         },
         {
           find: "swiper/css/free-mode",
           replacement: path.resolve(
             __dirname,
-            "node_modules/swiper/swiper.css"
+            "node_modules/swiper/modules/free-mode.css"
           ),
         },
         {
