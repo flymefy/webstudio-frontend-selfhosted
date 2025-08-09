@@ -163,13 +163,7 @@ export default defineConfig(({ mode }) => {
         },
         {
           find: "rc-slider",
-          replacement:
-            "/workspace/node_modules/.pnpm/rc-slider@11.1.8_react-dom@18.3.0-canary-14898b6a9-20240318_react@18.3.0-canary-14898b6a9-202_n4whn22pmofkpza4etaucjwzb4/node_modules/rc-slider",
-        },
-        {
-          find: "rc-slider/es/index.js",
-          replacement:
-            "/workspace/node_modules/.pnpm/rc-slider@11.1.8_react-dom@18.3.0-canary-14898b6a9-20240318_react@18.3.0-canary-14898b6a9-202_n4whn22pmofkpza4etaucjwzb4/node_modules/rc-slider/es/index.js",
+          replacement: path.resolve(__dirname, "node_modules/rc-slider"),
         },
         {
           find: "react-icons",
