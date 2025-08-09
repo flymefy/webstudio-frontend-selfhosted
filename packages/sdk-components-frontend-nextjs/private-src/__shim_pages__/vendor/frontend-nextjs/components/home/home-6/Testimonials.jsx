@@ -3,9 +3,9 @@
 
 import React, { useRef, useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Thumbs } from '../../../../../../adapters/swiper-core';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Thumbs } from "swiper";
+import "swiper/css/thumbs";
 import { testimonial2 } from "../../../data/testimonialData";
 
 export default function Testimonials() {

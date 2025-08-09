@@ -2,7 +2,7 @@
 'use client'
 
 import Link from '../../../../../../adapters/link';
-import Slider from '../../../../../../adapters/react-slick';
+import Slider from "react-slick";
 import { destinations9 } from "../../../data/desinations";
 
 const PoularDestinations = () => {

@@ -1,4 +1,4 @@
-
+import "photoswipe/dist/photoswipe.css";
 import activityData from '../../../../data/activity';
 import Wrapper from '../../../../components/layout/Wrapper';
 import Overview from '../../../../components/activity-single/Overview';

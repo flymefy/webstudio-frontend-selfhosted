@@ -2,7 +2,7 @@
 'use client'
 
 import Link from '../../../../../../adapters/link';
-import Slider from '../../../../../../adapters/react-slick';
+import Slider from "react-slick";
 import { tourCategories1 } from "../../../data/tourCategories";
 
 const TourCategories = () => {

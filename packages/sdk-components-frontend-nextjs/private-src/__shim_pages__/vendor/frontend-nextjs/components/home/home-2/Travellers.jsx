@@ -1,8 +1,8 @@
 
 'use client'
 
-import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 import { destinations3 } from "../../../data/desinations";
 import Link from '../../../../../../adapters/link';
 

@@ -3,10 +3,10 @@
 
 import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 import { testimonial2 } from "../../../data/testimonialData";
-import { EffectCards } from '../../../../../../adapters/swiper-core';
+import { EffectCards } from "swiper";
 
 const Testimonial = () => {
   return (

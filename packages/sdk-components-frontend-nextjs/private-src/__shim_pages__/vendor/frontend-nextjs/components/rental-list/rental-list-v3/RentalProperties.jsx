@@ -2,8 +2,8 @@
 'use client'
 
 import rentalssData from "../../../data/rentals";
-import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 import Image from '../../../../../../adapters/next-image';
 import Link from '../../../../../../adapters/link';
 

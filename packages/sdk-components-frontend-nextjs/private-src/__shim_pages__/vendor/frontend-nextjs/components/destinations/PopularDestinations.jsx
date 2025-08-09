@@ -3,9 +3,9 @@
 
 import Image from '../../../../../adapters/next-image';
 import Link from '../../../../../adapters/link';
-import { Swiper, SwiperSlide } from '../../../../../adapters/swiper-react';
-import { Navigation } from '../../../../../adapters/swiper-core';
-import { Scrollbar } from '../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import { Scrollbar } from "swiper";
 import { destinations2 } from "../../data/desinations";
 
 const PopularDestinations = () => {

@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import Image from '../../../../../adapters/next-image';
-import Slider from '../../../../../adapters/react-slick';
+import Slider from "react-slick";
 import { useRouter } from '../../../../../adapters/next-navigation';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const AvailableRooms = ({ hotel }) => {
   const router = useRouter();

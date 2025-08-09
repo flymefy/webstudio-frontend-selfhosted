@@ -30,11 +30,7 @@ function transformSource(
   aliasPrefix: string,
   adapterPrefix: string
 ) {
-  // Strip css/scss imports
-  src = src.replace(
-    /^\s*import\s+[^;]*['\"]([^'\"]+\.(css|scss))['\"];?\s*$/gim,
-    ""
-  );
+  // Keep css/scss imports for accurate behavior
   // Adapt next/image
   src = src.replace(
     /from\s+["']next\/image["']/g,
@@ -70,31 +66,7 @@ function transformSource(
     /from\s+["']react-router-dom["']/g,
     `from '${adapterPrefix}link'`
   );
-  // Adapt swiper/react
-  src = src.replace(
-    /from\s+["']swiper\/react["']/g,
-    `from '${adapterPrefix}swiper-react'`
-  );
-  // Adapt swiper core
-  src = src.replace(
-    /from\s+["']swiper["']/g,
-    `from '${adapterPrefix}swiper-core'`
-  );
-  // Adapt react-parallax
-  src = src.replace(
-    /from\s+["']react-parallax["']/g,
-    `from '${adapterPrefix}react-parallax'`
-  );
-  // Adapt react-slick
-  src = src.replace(
-    /from\s+["']react-slick["']/g,
-    `from '${adapterPrefix}react-slick'`
-  );
-  // Strip swiper css side-effect imports like "swiper/css" or "swiper/css/thumbs"
-  src = src.replace(
-    /^\s*import\s+[^;]*['\"]swiper\/css(?:\/[^'\"]*)?['\"];?\s*$/gim,
-    ""
-  );
+  // Preserve swiper/react, swiper, react-parallax, react-slick imports as-is
   // Resolve @/ alias to vendor root relative
   src = src.replace(/from\s+["']@\/(.+?)["']/g, (_m, p1) => {
     return `from '${aliasPrefix}${p1}'`;

@@ -2,7 +2,7 @@
 'use client'
 
 import Link from '../../../../../adapters/link';
-import { Parallax } from '../../../../../adapters/react-parallax';
+import { Parallax } from "react-parallax";
 
 const ParallaxBanner = () => {
   return (

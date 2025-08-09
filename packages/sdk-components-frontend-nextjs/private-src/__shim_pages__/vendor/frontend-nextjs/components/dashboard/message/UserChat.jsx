@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from '../../../../../../adapters/link';
 import Image from '../../../../../../adapters/next-image';
+import styles from './UserChat.module.css';
 
 const UserChat = () => {
   const [isChatVisible, setIsChatVisible] = useState(false);

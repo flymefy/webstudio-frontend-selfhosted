@@ -3,8 +3,8 @@
 
 import Image from '../../../../../adapters/next-image';
 import Link from '../../../../../adapters/link';
-import { Swiper, SwiperSlide } from '../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from '../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 import toursData from "../../data/tours";
 import isTextMatched from "../../utils/isTextMatched";
 

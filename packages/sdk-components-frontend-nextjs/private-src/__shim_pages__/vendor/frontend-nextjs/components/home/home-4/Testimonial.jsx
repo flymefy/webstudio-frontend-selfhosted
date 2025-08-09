@@ -2,8 +2,8 @@
 'use client'
 
 import Image from '../../../../../../adapters/next-image';
-import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation } from '../../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 import { testimonial2 } from "../../../data/testimonialData";
 
 const Testimonial = () => {

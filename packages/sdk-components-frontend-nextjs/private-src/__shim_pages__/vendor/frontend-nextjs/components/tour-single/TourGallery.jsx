@@ -8,8 +8,8 @@ import SidebarRight from '../../components/tour-single/SidebarRight';
 import Overview from '../../components/tour-single/Overview';
 import TourSnapShot from '../../components/tour-single/TourSnapShot';
 import { Gallery, Item } from "react-photoswipe-gallery";
-import { Swiper, SwiperSlide } from '../../../../../adapters/swiper-react';
-import { Navigation } from '../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 import ModalVideo from "react-modal-video"
 
 export default function TourGallery({tour}) {

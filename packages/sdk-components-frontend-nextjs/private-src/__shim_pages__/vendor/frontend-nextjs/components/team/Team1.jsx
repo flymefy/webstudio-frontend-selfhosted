@@ -2,7 +2,7 @@
 'use client'
 
 import Image from '../../../../../adapters/next-image';
-import Slider from '../../../../../adapters/react-slick';
+import Slider from "react-slick";
 import teamData from "../../data/teamData";
 
 const Team1 = () => {

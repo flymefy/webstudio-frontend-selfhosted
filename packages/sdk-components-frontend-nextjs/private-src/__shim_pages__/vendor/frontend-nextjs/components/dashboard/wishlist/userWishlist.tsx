@@ -4,7 +4,7 @@ import Breadcrumb from "../../../core/common/Breadcrumb/breadcrumb";
 import Sidebar from "../../../core/common/sidebar/sidebar";
 import { Link } from "../../../../../../adapters/link";
 import ImageWithBasePath from "../../../core/common/imageWithBasePath";
-import Slider from "../../../../../../adapters/react-slick";
+import Slider from "react-slick";
 
 const UserWishlist = () => {
   const routes = all_routes;

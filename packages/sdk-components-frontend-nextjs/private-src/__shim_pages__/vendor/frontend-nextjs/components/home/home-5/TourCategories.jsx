@@ -2,8 +2,8 @@
 'use client'
 
 import Link from '../../../../../../adapters/link';
-import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 import { tourCategories1 } from "../../../data/tourCategories";
 
 const TourCategories = () => {

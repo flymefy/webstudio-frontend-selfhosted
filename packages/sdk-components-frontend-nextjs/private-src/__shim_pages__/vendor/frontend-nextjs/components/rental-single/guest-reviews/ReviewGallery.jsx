@@ -2,7 +2,7 @@
 'use client'
 
 import Image from '../../../../../../adapters/next-image';
-
+import "photoswipe/dist/photoswipe.css";
 import { Gallery, Item } from "react-photoswipe-gallery";
 
 const ReviewGallery = () => {

@@ -2,8 +2,8 @@
 'use client'
 
 import Image from '../../../../../../adapters/next-image';
-import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 import cruiseData from "../../../data/cruise";
 import Link from '../../../../../../adapters/link';
 

@@ -1,8 +1,8 @@
 'use client'
 
 import carsData from "../../../data/cars";
-import { Swiper, SwiperSlide } from '../../../../../../adapters/swiper-react';
-import { Navigation, Pagination } from '../../../../../../adapters/swiper-core';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
 import Image from '../../../../../../adapters/next-image';
 import { useRouter } from '../../../../../../adapters/next-navigation';
 import { useSelectedCar } from '../../../contexts/SelectedCarContext';

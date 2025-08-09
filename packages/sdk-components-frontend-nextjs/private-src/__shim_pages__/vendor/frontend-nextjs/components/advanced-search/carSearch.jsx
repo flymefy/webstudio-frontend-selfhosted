@@ -7,7 +7,7 @@ import axios from "axios";
 import { all_routes } from "../router/all_routes";
 
 import ImageWithBasePath from "../../core/common/imageWithBasePath";
-import Slider from '../../../../../adapters/react-slick';
+import Slider from "react-slick";
 import BannerCounter from "../home-Two/counter";
 import { useFlightContext } from "../flight/FlightContext";
 
