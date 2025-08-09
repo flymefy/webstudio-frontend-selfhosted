@@ -90,6 +90,11 @@ function transformSource(
     /from\s+["']react-slick["']/g,
     `from '${adapterPrefix}react-slick'`
   );
+  // Strip swiper css side-effect imports like "swiper/css" or "swiper/css/thumbs"
+  src = src.replace(
+    /^\s*import\s+[^;]*['\"]swiper\/css(?:\/[^'\"]*)?['\"];?\s*$/gim,
+    ""
+  );
   // Resolve @/ alias to vendor root relative
   src = src.replace(/from\s+["']@\/(.+?)["']/g, (_m, p1) => {
     return `from '${aliasPrefix}${p1}'`;
