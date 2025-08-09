@@ -158,8 +158,10 @@ export default defineConfig(({ mode }) => {
         },
         {
           find: "rc-slider",
-          replacement:
-            "/workspace/node_modules/.pnpm/rc-slider@11.1.8_react-dom@18.3.0-canary-14898b6a9-20240318_react@18.3.0-canary-14898b6a9-202_n4whn22pmofkpza4etaucjwzb4/node_modules/rc-slider",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/rc-slider"
+          ),
         },
         {
           find: "react-icons",
@@ -219,8 +221,10 @@ export default defineConfig(({ mode }) => {
         },
         {
           find: "lucide-react",
-          replacement:
-            "/workspace/node_modules/.pnpm/lucide-react@0.539.0_react@18.3.0-canary-14898b6a9-20240318/node_modules/lucide-react",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/lucide-react"
+          ),
         },
         {
           find: "react-tabs",
@@ -228,8 +232,7 @@ export default defineConfig(({ mode }) => {
         },
         {
           find: "dayjs",
-          replacement:
-            "/workspace/node_modules/.pnpm/dayjs@1.11.13/node_modules/dayjs",
+          replacement: path.resolve(rootDir ?? __dirname, "node_modules/dayjs"),
         },
         {
           find: "react-toastify/dist/ReactToastify.css",
