@@ -76,6 +76,11 @@ function relativeFromPrivateSrc(absPath: string) {
 }
 
 function transformSourceForAdapters(src: string) {
+  // Strip css/scss imports completely
+  src = src.replace(
+    /^\s*import\s+[^;]*['"]([^'\"]+\.(css|scss))['"];?\s*$/gim,
+    ""
+  );
   // Replace next/image import to adapter
   src = src.replace(
     /from\s+["']next\/image["']/g,
