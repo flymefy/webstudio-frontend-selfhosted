@@ -1,4 +1,4 @@
-import "photoswipe/dist/photoswipe.css";
+import 'photoswipe/style.css';
 import { hotelsData } from '../../../../data/hotels';
 import Wrapper from '../../../../components/layout/Wrapper';
 import Overview from '../../../../components/hotel-single/Overview';
