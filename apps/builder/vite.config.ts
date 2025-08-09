@@ -176,6 +176,10 @@ export default defineConfig(({ mode }) => {
             "node_modules/react-phone-number-input"
           ),
         },
+        {
+          find: "photoswipe",
+          replacement: path.resolve(__dirname, "node_modules/photoswipe"),
+        },
       ],
     },
     ssr: {
