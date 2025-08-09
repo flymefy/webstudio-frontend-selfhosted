@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "pnpm -r --filter='!./fixtures/*' build",
+    "build": "pnpm -r --filter=@webstudio-is/builder... build",
     "dts": "pnpm -r dts",
     "dev": "pnpm --filter='@webstudio-is/builder' dev",
     "lint": "eslint \"**/*.{ts,tsx}\" --max-warnings 0",
