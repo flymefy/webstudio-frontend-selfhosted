@@ -210,6 +210,10 @@ export default defineConfig(({ mode }) => {
           replacement: path.resolve(__dirname, "node_modules/photoswipe"),
         },
         {
+          find: "antd",
+          replacement: path.resolve(__dirname, "node_modules/antd"),
+        },
+        {
           find: "react-toastify/dist/ReactToastify.css",
           replacement: path.resolve(
             __dirname,
