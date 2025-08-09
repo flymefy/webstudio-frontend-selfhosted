@@ -1,4 +1,5 @@
 import { type TemplateMeta, $, ws, css } from "@webstudio-is/template";
+import { imagePlaceholderDataUrl } from "@webstudio-is/image";
 
 export const page_page_jsx_template = {
   category: "pages",
@@ -499,3 +500,504 @@ export const pagetourtour_singleid_templateMeta: TemplateMeta =
   pagetourtour_singleid_template;
 export const page_booking_flightid_templateMeta: TemplateMeta =
   page_booking_flightid_template;
+
+// __SECTIONS_START__
+export const section_about_section_template = {
+  category: "general",
+  description: "About Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="About Section">
+      <ws.descendant ws:label="About Section" selector=" .about-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_about_section_four_template = {
+  category: "general",
+  description: "About Section Four",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="About Section Four">
+      <ws.descendant
+        ws:label="About Section Four"
+        selector=" .about-section-four"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_benefit_section_template = {
+  category: "general",
+  description: "Benefit Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Benefit Section">
+      <ws.descendant ws:label="Benefit Section" selector=" .benefit-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_benifit_section_template = {
+  category: "general",
+  description: "Benifit Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Benifit Section">
+      <ws.descendant ws:label="Benifit Section" selector=" .benifit-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_blog_section_four_template = {
+  category: "general",
+  description: "Blog Section Four",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Blog Section Four">
+      <ws.descendant
+        ws:label="Blog Section Four"
+        selector=" .blog-section-four"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_choose_us_section_template = {
+  category: "general",
+  description: "Choose Us Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Choose Us Section">
+      <ws.descendant
+        ws:label="Choose Us Section"
+        selector=" .choose-us-section"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_client_section_four_template = {
+  category: "general",
+  description: "Client Section Four",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Client Section Four">
+      <ws.descendant
+        ws:label="Client Section Four"
+        selector=" .client-section-four"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_faq_section_template = {
+  category: "general",
+  description: "Faq Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Faq Section">
+      <ws.descendant ws:label="Faq Section" selector=" .faq-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_faq_section_three_template = {
+  category: "general",
+  description: "Faq Section Three",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Faq Section Three">
+      <ws.descendant
+        ws:label="Faq Section Three"
+        selector=" .faq-section-three"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_feeback_section_template = {
+  category: "general",
+  description: "Feeback Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Feeback Section">
+      <ws.descendant ws:label="Feeback Section" selector=" .feeback-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_filter_section_template = {
+  category: "general",
+  description: "Filter Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Filter Section">
+      <ws.descendant ws:label="Filter Section" selector=" .filter-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_hero_section_template = {
+  category: "general",
+  description: "Hero Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Hero Section">
+      <ws.descendant ws:label="Hero Section" selector=" .hero-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_hero_section_five_template = {
+  category: "general",
+  description: "Hero Section Five",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Hero Section Five">
+      <ws.descendant
+        ws:label="Hero Section Five"
+        selector=" .hero-section-five"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_hero_section_four_template = {
+  category: "general",
+  description: "Hero Section Four",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Hero Section Four">
+      <ws.descendant
+        ws:label="Hero Section Four"
+        selector=" .hero-section-four"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_hero_section_three_template = {
+  category: "general",
+  description: "Hero Section Three",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Hero Section Three">
+      <ws.descendant
+        ws:label="Hero Section Three"
+        selector=" .hero-section-three"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_offers_section_template = {
+  category: "general",
+  description: "Offers Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Offers Section">
+      <ws.descendant ws:label="Offers Section" selector=" .offers-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_place_section_template = {
+  category: "general",
+  description: "Place Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Place Section">
+      <ws.descendant ws:label="Place Section" selector=" .place-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_price_section_template = {
+  category: "general",
+  description: "Price Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Price Section">
+      <ws.descendant ws:label="Price Section" selector=" .price-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_section_template = {
+  category: "general",
+  description: "Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Section">
+      <ws.descendant ws:label="Section" selector=" .section" />
+    </ws.element>
+  ),
+} as const;
+export const section_section_bg_template = {
+  category: "general",
+  description: "Section Bg",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Section Bg">
+      <ws.descendant ws:label="Section Bg" selector=" .section-bg" />
+    </ws.element>
+  ),
+} as const;
+export const section_section_header_template = {
+  category: "general",
+  description: "Section Header",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Section Header">
+      <ws.descendant ws:label="Section Header" selector=" .section-header" />
+    </ws.element>
+  ),
+} as const;
+export const section_section_header_six_template = {
+  category: "general",
+  description: "Section Header Six",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Section Header Six">
+      <ws.descendant
+        ws:label="Section Header Six"
+        selector=" .section-header-six"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_section_right_img_template = {
+  category: "general",
+  description: "Section Right Img",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Section Right Img">
+      <ws.descendant
+        ws:label="Section Right Img"
+        selector=" .section-right-img"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_section_right_img_two_template = {
+  category: "general",
+  description: "Section Right Img Two",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Section Right Img Two">
+      <ws.descendant
+        ws:label="Section Right Img Two"
+        selector=" .section-right-img-two"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_section_slider_nav_template = {
+  category: "general",
+  description: "Section Slider Nav",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Section Slider Nav">
+      <ws.descendant
+        ws:label="Section Slider Nav"
+        selector=" .section-slider-nav"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_sectionTitle_template = {
+  category: "general",
+  description: "SectionTitle",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="SectionTitle">
+      <ws.descendant ws:label="SectionTitle" selector=" .sectionTitle" />
+    </ws.element>
+  ),
+} as const;
+export const section_support_company_section_template = {
+  category: "general",
+  description: "Support Company Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Support Company Section">
+      <ws.descendant
+        ws:label="Support Company Section"
+        selector=" .support-company-section"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_support_section_template = {
+  category: "general",
+  description: "Support Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Support Section">
+      <ws.descendant ws:label="Support Section" selector=" .support-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_support_section_five_template = {
+  category: "general",
+  description: "Support Section Five",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Support Section Five">
+      <ws.descendant
+        ws:label="Support Section Five"
+        selector=" .support-section-five"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_team_section_template = {
+  category: "general",
+  description: "Team Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Team Section">
+      <ws.descendant ws:label="Team Section" selector=" .team-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_testimonial_section_template = {
+  category: "general",
+  description: "Testimonial Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Testimonial Section">
+      <ws.descendant
+        ws:label="Testimonial Section"
+        selector=" .testimonial-section"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_testimonial_section_three_template = {
+  category: "general",
+  description: "Testimonial Section Three",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Testimonial Section Three">
+      <ws.descendant
+        ws:label="Testimonial Section Three"
+        selector=" .testimonial-section-three"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_update_section_template = {
+  category: "general",
+  description: "Update Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Update Section">
+      <ws.descendant ws:label="Update Section" selector=" .update-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_user_section_template = {
+  category: "general",
+  description: "User Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="User Section">
+      <ws.descendant ws:label="User Section" selector=" .user-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_work_section_template = {
+  category: "general",
+  description: "Work Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Work Section">
+      <ws.descendant ws:label="Work Section" selector=" .work-section" />
+    </ws.element>
+  ),
+} as const;
+export const section_work_section_six_template = {
+  category: "general",
+  description: "Work Section Six",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Work Section Six">
+      <ws.descendant
+        ws:label="Work Section Six"
+        selector=" .work-section-six"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_xb_cursor_section_template = {
+  category: "general",
+  description: "Xb Cursor Section",
+  icon: imagePlaceholderDataUrl,
+  template: (
+    <ws.element ws:tag="div" ws:label="Xb Cursor Section">
+      <ws.descendant
+        ws:label="Xb Cursor Section"
+        selector=" .xb-cursor-section"
+      />
+    </ws.element>
+  ),
+} as const;
+export const section_about_section_templateMeta: TemplateMeta =
+  section_about_section_template;
+export const section_about_section_four_templateMeta: TemplateMeta =
+  section_about_section_four_template;
+export const section_benefit_section_templateMeta: TemplateMeta =
+  section_benefit_section_template;
+export const section_benifit_section_templateMeta: TemplateMeta =
+  section_benifit_section_template;
+export const section_blog_section_four_templateMeta: TemplateMeta =
+  section_blog_section_four_template;
+export const section_choose_us_section_templateMeta: TemplateMeta =
+  section_choose_us_section_template;
+export const section_client_section_four_templateMeta: TemplateMeta =
+  section_client_section_four_template;
+export const section_faq_section_templateMeta: TemplateMeta =
+  section_faq_section_template;
+export const section_faq_section_three_templateMeta: TemplateMeta =
+  section_faq_section_three_template;
+export const section_feeback_section_templateMeta: TemplateMeta =
+  section_feeback_section_template;
+export const section_filter_section_templateMeta: TemplateMeta =
+  section_filter_section_template;
+export const section_hero_section_templateMeta: TemplateMeta =
+  section_hero_section_template;
+export const section_hero_section_five_templateMeta: TemplateMeta =
+  section_hero_section_five_template;
+export const section_hero_section_four_templateMeta: TemplateMeta =
+  section_hero_section_four_template;
+export const section_hero_section_three_templateMeta: TemplateMeta =
+  section_hero_section_three_template;
+export const section_offers_section_templateMeta: TemplateMeta =
+  section_offers_section_template;
+export const section_place_section_templateMeta: TemplateMeta =
+  section_place_section_template;
+export const section_price_section_templateMeta: TemplateMeta =
+  section_price_section_template;
+export const section_section_templateMeta: TemplateMeta =
+  section_section_template;
+export const section_section_bg_templateMeta: TemplateMeta =
+  section_section_bg_template;
+export const section_section_header_templateMeta: TemplateMeta =
+  section_section_header_template;
+export const section_section_header_six_templateMeta: TemplateMeta =
+  section_section_header_six_template;
+export const section_section_right_img_templateMeta: TemplateMeta =
+  section_section_right_img_template;
+export const section_section_right_img_two_templateMeta: TemplateMeta =
+  section_section_right_img_two_template;
+export const section_section_slider_nav_templateMeta: TemplateMeta =
+  section_section_slider_nav_template;
+export const section_sectionTitle_templateMeta: TemplateMeta =
+  section_sectionTitle_template;
+export const section_support_company_section_templateMeta: TemplateMeta =
+  section_support_company_section_template;
+export const section_support_section_templateMeta: TemplateMeta =
+  section_support_section_template;
+export const section_support_section_five_templateMeta: TemplateMeta =
+  section_support_section_five_template;
+export const section_team_section_templateMeta: TemplateMeta =
+  section_team_section_template;
+export const section_testimonial_section_templateMeta: TemplateMeta =
+  section_testimonial_section_template;
+export const section_testimonial_section_three_templateMeta: TemplateMeta =
+  section_testimonial_section_three_template;
+export const section_update_section_templateMeta: TemplateMeta =
+  section_update_section_template;
+export const section_user_section_templateMeta: TemplateMeta =
+  section_user_section_template;
+export const section_work_section_templateMeta: TemplateMeta =
+  section_work_section_template;
+export const section_work_section_six_templateMeta: TemplateMeta =
+  section_work_section_six_template;
+export const section_xb_cursor_section_templateMeta: TemplateMeta =
+  section_xb_cursor_section_template;
+// __SECTIONS_END__

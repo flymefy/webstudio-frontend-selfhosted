@@ -36,7 +36,7 @@
     }
   },
   "scripts": {
-    "prepare:vendor": "tsx ./private-src/register-from-vendor.ts && tsx ./private-src/register-pages.ts",
+    "prepare:vendor": "tsx ./private-src/register-from-vendor.ts && tsx ./private-src/register-pages.ts && tsx ./private-src/register-sections.ts",
     "build": "vite build --config ../../vite.sdk-components.config.ts",
     "build:args": "NODE_OPTIONS=--conditions=webstudio generate-arg-types './private-src/**/*.tsx !./private-src/**/*.stories.tsx !./private-src/**/*.ws.ts !./private-src/**/*.template.tsx' && prettier --write \"**/*.props.ts\"",
     "build:stories": "webstudio-sdk generate-stories && prettier --write \"private-src/__generated__/*.stories.tsx\"",
