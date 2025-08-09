@@ -30,7 +30,7 @@
       "import": "./lib/hooks.js"
     },
     "./templates": {
-      "webstudio": "./private-src/templates.ts",
+      "webstudio": "./private-src/templates.tsx",
       "types": "./lib/types/templates.d.ts",
       "import": "./lib/templates.js"
     }

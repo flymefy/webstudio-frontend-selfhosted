@@ -91,7 +91,7 @@ function writeShim(originalPath: string) {
     const metaVarBase = paramCase(compName).replace(/-/g, "_");
     const metaVar = `${metaVarBase}_template`;
     templateExports.push(
-      `export const ${metaVar} = { category: "pages", order: 1, description: "${label}", template: (<$.${compName} ws:label="${label}" />) } as const;`
+      `export const ${metaVar} = { category: "pages", order: 1, description: "${label}", template: (<ws.element ws:tag="div" ws:label="${label}"><$.${compName} /></ws.element>) } as const;`
     );
   }
 
@@ -105,9 +105,9 @@ function writeShim(originalPath: string) {
     (componentExports.length ? "\n" + componentExports.join("\n") + "\n" : "");
   writeFileSync(componentsDest, newComponents);
 
-  // Write templates.ts to include all generated page templates
-  const templatesDest = path.join(outDir, "templates.ts");
-  const header = `import { type TemplateMeta, $ } from "@webstudio-is/template";\n`;
+  // Write templates.tsx to include all generated page templates
+  const templatesDest = path.join(outDir, "templates.tsx");
+  const header = `import { type TemplateMeta, $, ws, css } from "@webstudio-is/template";\n`;
   const body = templateExports.join("\n");
   const exportNames = templateExports.map(
     (t) => t.match(/^export const\s+([A-Za-z0-9_]+)\s*=/)![1]
