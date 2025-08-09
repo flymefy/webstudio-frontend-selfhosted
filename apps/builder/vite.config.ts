@@ -90,20 +90,6 @@ export default defineConfig(({ mode }) => {
           ),
         },
         {
-          find: "swiper/react",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/swiper/react"
-          ),
-        },
-        {
-          find: "swiper",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/swiper"
-          ),
-        },
-        {
           find: "react-parallax",
           replacement: path.resolve(
             rootDir ?? __dirname,
@@ -150,6 +136,13 @@ export default defineConfig(({ mode }) => {
           replacement: path.resolve(
             rootDir ?? __dirname,
             "node_modules/react-icons"
+          ),
+        },
+        {
+          find: "react-pro-sidebar",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/react-pro-sidebar"
           ),
         },
       ],
