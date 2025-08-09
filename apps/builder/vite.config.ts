@@ -239,8 +239,7 @@ export default defineConfig(({ mode }) => {
         },
         {
           find: "dayjs",
-          replacement:
-            "/workspace/node_modules/.pnpm/dayjs@1.11.13/node_modules/dayjs",
+          replacement: path.resolve(__dirname, "node_modules/dayjs"),
         },
         {
           find: "react-toastify/dist/ReactToastify.css",
