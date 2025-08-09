@@ -216,6 +216,13 @@ export default defineConfig(({ mode }) => {
             "node_modules/react-toastify/dist/ReactToastify.css"
           ),
         },
+        {
+          find: "antd/dist/reset.css",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/antd/dist/reset.css"
+          ),
+        },
       ],
     },
     ssr: {

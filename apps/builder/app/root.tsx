@@ -16,7 +16,7 @@ import "/workspace/node_modules/.pnpm/rc-slider@10.6.2_react-dom@18.3.0-canary-1
 import "/workspace/node_modules/.pnpm/slick-carousel@1.8.1_jquery@3.7.1/node_modules/slick-carousel/slick/slick.css";
 import "/workspace/node_modules/.pnpm/slick-carousel@1.8.1_jquery@3.7.1/node_modules/slick-carousel/slick/slick-theme.css";
 import "/workspace/node_modules/.pnpm/photoswipe@5.4.4/node_modules/photoswipe/dist/photoswipe.css";
-import "/workspace/node_modules/.pnpm/antd@5.26.7/node_modules/antd/dist/reset.css";
+import "antd/dist/reset.css";
 
 export const loader = () => {
   return json({
