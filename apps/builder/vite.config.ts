@@ -180,6 +180,13 @@ export default defineConfig(({ mode }) => {
           find: "photoswipe",
           replacement: path.resolve(__dirname, "node_modules/photoswipe"),
         },
+        {
+          find: "react-toastify/dist/ReactToastify.css",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-toastify/dist/ReactToastify.css"
+          ),
+        },
       ],
     },
     ssr: {
