@@ -1,4 +1,4 @@
 {
-  "framework": "remix-vite",
+  "framework": "remix",
   "installCommand": "pnpm -w install --prefer-offline && pnpm -w --filter='packages/*' build"
 }
