@@ -88,57 +88,42 @@ export default defineConfig(({ mode }) => {
         },
         {
           find: "react-parallax",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/react-parallax"
-          ),
+          replacement: path.resolve(__dirname, "node_modules/react-parallax"),
         },
         {
           find: "react-photoswipe-gallery",
           replacement: path.resolve(
-            rootDir ?? __dirname,
+            __dirname,
             "node_modules/react-photoswipe-gallery"
           ),
         },
         {
           find: "google-map-react",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/google-map-react"
-          ),
+          replacement: path.resolve(__dirname, "node_modules/google-map-react"),
         },
         {
           find: "react-modal-video",
           replacement: path.resolve(
-            rootDir ?? __dirname,
+            __dirname,
             "node_modules/react-modal-video"
           ),
         },
         {
           find: "react-toastify",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/react-toastify"
-          ),
+          replacement: path.resolve(__dirname, "node_modules/react-toastify"),
         },
         {
           find: "rc-slider",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/rc-slider"
-          ),
+          replacement: path.resolve(__dirname, "node_modules/rc-slider"),
         },
         {
           find: "react-icons",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/react-icons"
-          ),
+          replacement: path.resolve(__dirname, "node_modules/react-icons"),
         },
         {
           find: "react-pro-sidebar",
           replacement: path.resolve(
-            rootDir ?? __dirname,
+            __dirname,
             "node_modules/react-pro-sidebar"
           ),
         },
