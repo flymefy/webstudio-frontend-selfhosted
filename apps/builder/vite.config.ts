@@ -72,13 +72,7 @@ export default defineConfig(({ mode }) => {
       conditions: [...conditions, "browser", "development|production"],
       alias: [
         // Swiper CSS aliases to real files
-        {
-          find: "swiper/css",
-          replacement: path.resolve(
-            __dirname,
-            "node_modules/swiper/swiper.css"
-          ),
-        },
+
         {
           find: "swiper/css/bundle",
           replacement: path.resolve(
