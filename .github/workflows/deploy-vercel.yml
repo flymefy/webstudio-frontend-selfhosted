@@ -1,0 +1,44 @@
+name: Deploy to Vercel (Builder)
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy @webstudio-is/builder to Vercel
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack (pnpm)
+        run: corepack enable
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm -w install --no-frozen-lockfile
+
+      # Optional: build locally; Vercel can also build on their infra
+      - name: Build (optional)
+        working-directory: apps/builder
+        run: pnpm run build
+        continue-on-error: true
+
+      - name: Deploy to Vercel (Production)
+        uses: vercel/action@v3
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: apps/builder
+          prod: true

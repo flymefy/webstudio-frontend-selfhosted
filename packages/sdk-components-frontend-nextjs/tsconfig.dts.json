@@ -1,0 +1,8 @@
+{
+  "extends": "@webstudio-is/tsconfig/dts.json",
+  "compilerOptions": {
+    "outDir": "lib/types",
+    "declarationDir": "lib/types"
+  },
+  "include": ["private-src/**/*.ts", "private-src/**/*.tsx"]
+}

@@ -71,6 +71,50 @@ export default defineConfig(({ mode }) => {
     resolve: {
       conditions: [...conditions, "browser", "development|production"],
       alias: [
+        // Swiper CSS aliases to real files
+
+        {
+          find: "swiper/css/bundle",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper-bundle.css"
+          ),
+        },
+        {
+          find: "swiper/css/navigation",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/navigation.css"
+          ),
+        },
+        {
+          find: "swiper/css/pagination",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/pagination.css"
+          ),
+        },
+        {
+          find: "swiper/css/scrollbar",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/scrollbar.css"
+          ),
+        },
+        {
+          find: "swiper/css/thumbs",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/thumbs.css"
+          ),
+        },
+        {
+          find: "swiper/css/free-mode",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/modules/free-mode.css"
+          ),
+        },
         {
           find: "~",
           replacement: resolve("app"),
@@ -80,6 +124,140 @@ export default defineConfig(({ mode }) => {
         {
           find: "@supabase/node-fetch",
           replacement: resolve("./app/shared/empty.ts"),
+        },
+        // UI deps used by vendor pages
+        {
+          find: "react-slick",
+          replacement: path.resolve(__dirname, "node_modules/react-slick"),
+        },
+        {
+          find: "react-parallax",
+          replacement: path.resolve(__dirname, "node_modules/react-parallax"),
+        },
+        {
+          find: "react-photoswipe-gallery",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-photoswipe-gallery"
+          ),
+        },
+        {
+          find: "google-map-react",
+          replacement: path.resolve(__dirname, "node_modules/google-map-react"),
+        },
+        {
+          find: "react-modal-video",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-modal-video"
+          ),
+        },
+        {
+          find: "react-toastify",
+          replacement: path.resolve(__dirname, "node_modules/react-toastify"),
+        },
+        {
+          find: "rc-slider",
+          replacement:
+            "/workspace/node_modules/.pnpm/rc-slider@11.1.8_react-dom@18.3.0-canary-14898b6a9-20240318_react@18.3.0-canary-14898b6a9-202_n4whn22pmofkpza4etaucjwzb4/node_modules/rc-slider",
+        },
+        {
+          find: "rc-slider/es/index.js",
+          replacement:
+            "/workspace/node_modules/.pnpm/rc-slider@11.1.8_react-dom@18.3.0-canary-14898b6a9-20240318_react@18.3.0-canary-14898b6a9-202_n4whn22pmofkpza4etaucjwzb4/node_modules/rc-slider/es/index.js",
+        },
+        {
+          find: "react-icons",
+          replacement: path.resolve(__dirname, "node_modules/react-icons"),
+        },
+        {
+          find: "react-pro-sidebar",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-pro-sidebar"
+          ),
+        },
+        // Force resolve swiper from this app's node_modules to avoid workspace root lookup
+        {
+          find: "swiper/react",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper-react.mjs"
+          ),
+        },
+        {
+          find: "swiper",
+          replacement: path.resolve(
+            __dirname,
+            "app/shared/swiper-modules-shim.mjs"
+          ),
+        },
+        {
+          find: "react-multi-date-picker",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-multi-date-picker"
+          ),
+        },
+        {
+          find: "aos",
+          replacement: path.resolve(__dirname, "node_modules/aos"),
+        },
+        {
+          find: "slick-carousel",
+          replacement: path.resolve(__dirname, "node_modules/slick-carousel"),
+        },
+        {
+          find: "react-phone-number-input",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-phone-number-input"
+          ),
+        },
+        {
+          find: "photoswipe",
+          replacement: path.resolve(__dirname, "node_modules/photoswipe"),
+        },
+        {
+          find: "antd",
+          replacement: path.resolve(__dirname, "node_modules/antd"),
+        },
+        {
+          find: "lucide-react",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/lucide-react"
+          ),
+        },
+        {
+          find: "react-tabs",
+          replacement: path.resolve(__dirname, "node_modules/react-tabs"),
+        },
+        {
+          find: "dayjs",
+          replacement:
+            "/workspace/node_modules/.pnpm/dayjs@1.11.13/node_modules/dayjs",
+        },
+        {
+          find: "react-toastify/dist/ReactToastify.css",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-toastify/dist/ReactToastify.css"
+          ),
+        },
+        {
+          find: "antd/dist/reset.css",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/antd/dist/reset.css"
+          ),
+        },
+        {
+          find: "rc-slider/assets/index.css",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/rc-slider/assets/index.css"
+          ),
         },
       ],
     },
@@ -136,5 +314,15 @@ export default defineConfig(({ mode }) => {
       }) as never,
     },
     envPrefix: "GITHUB_",
+    optimizeDeps: {
+      include: [
+        "swiper",
+        "swiper/react",
+        "react-slick",
+        "react-parallax",
+        "react-photoswipe-gallery",
+        "photoswipe",
+      ],
+    },
   };
 });

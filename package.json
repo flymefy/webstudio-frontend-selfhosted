@@ -43,6 +43,7 @@
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-unicorn": "^57.0.0",
+    "lucide-react": "^0.539.0",
     "nano-staged": "^0.8.0",
     "prettier": "3.5.3",
     "react": "18.3.0-canary-14898b6a9-20240318",

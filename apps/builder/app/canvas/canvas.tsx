@@ -74,6 +74,10 @@ import { createInstanceElement } from "./elements";
 import { subscribeScrollbarSize } from "./scrollbar-width";
 import { compareMedia } from "@webstudio-is/css-engine";
 import { builderApi } from "~/shared/builder-api";
+import * as feComponents from "@webstudio-is/sdk-components-frontend-nextjs";
+import * as feMetas from "@webstudio-is/sdk-components-frontend-nextjs/metas";
+import { hooks as feHooks } from "@webstudio-is/sdk-components-frontend-nextjs/hooks";
+import * as feTemplates from "@webstudio-is/sdk-components-frontend-nextjs/templates";
 
 registerContainers();
 
@@ -261,6 +265,13 @@ export const Canvas = () => {
       metas: animationComponentMetas,
       hooks: animationComponentHooks,
       templates: animationTemplates,
+    });
+    registerComponentLibrary({
+      namespace: "@webstudio-is/sdk-components-frontend-nextjs",
+      components: feComponents,
+      metas: feMetas,
+      hooks: feHooks,
+      templates: feTemplates,
     });
   });
 
