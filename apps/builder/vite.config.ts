@@ -71,6 +71,56 @@ export default defineConfig(({ mode }) => {
     resolve: {
       conditions: [...conditions, "browser", "development|production"],
       alias: [
+        // Swiper CSS aliases to real files
+        {
+          find: "swiper/css",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper.css"
+          ),
+        },
+        {
+          find: "swiper/css/bundle",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper-bundle.css"
+          ),
+        },
+        {
+          find: "swiper/css/navigation",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper.css"
+          ),
+        },
+        {
+          find: "swiper/css/pagination",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper.css"
+          ),
+        },
+        {
+          find: "swiper/css/scrollbar",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper.css"
+          ),
+        },
+        {
+          find: "swiper/css/thumbs",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper.css"
+          ),
+        },
+        {
+          find: "swiper/css/free-mode",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper.css"
+          ),
+        },
         {
           find: "~",
           replacement: resolve("app"),
