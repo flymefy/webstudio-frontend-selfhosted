@@ -1,5 +1,11 @@
 {
-  "git": {
-    "deploymentEnabled": true
+  "installCommand": "pnpm i -w && pnpm i --filter @webstudio-is/builder",
+  "buildCommand": "pnpm -r --filter @webstudio-is/builder... build",
+  "framework": "remix",
+  "functions": {
+    "api/**": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
   }
 }
