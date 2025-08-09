@@ -136,5 +136,15 @@ export default defineConfig(({ mode }) => {
       }) as never,
     },
     envPrefix: "GITHUB_",
+    optimizeDeps: {
+      include: [
+        "swiper",
+        "swiper/react",
+        "react-slick",
+        "react-parallax",
+        "react-photoswipe-gallery",
+        "photoswipe",
+      ],
+    },
   };
 });
