@@ -1,18 +1,18 @@
 
-import toursData from "@/data/tours";
-import Wrapper from "@/components/layout/Wrapper";
-import TopBreadCrumb from "@/components/tour-single/TopBreadCrumb";
-import ReviewProgress2 from "@/components/tour-single/guest-reviews/ReviewProgress2";
-import DetailsReview2 from "@/components/tour-single/guest-reviews/DetailsReview2";
-import ReplyForm from "@/components/tour-single/ReplyForm";
-import ReplyFormReview2 from "@/components/tour-single/ReplyFormReview2";
-import CallToActions from "@/components/common/CallToActions";
-import Tours from "@/components/tours/Tours";
-import Faq from "@/components/faq/Faq";
-import Link from "next/link";
-import Itinerary from "@/components/tour-single/itinerary";
-import ImportantInfo from "@/components/tour-single/ImportantInfo";
-import TourGallery from "@/components/tour-single/TourGallery";
+import toursData from '../../../../data/tours';
+import Wrapper from '../../../../components/layout/Wrapper';
+import TopBreadCrumb from '../../../../components/tour-single/TopBreadCrumb';
+import ReviewProgress2 from '../../../../components/tour-single/guest-reviews/ReviewProgress2';
+import DetailsReview2 from '../../../../components/tour-single/guest-reviews/DetailsReview2';
+import ReplyForm from '../../../../components/tour-single/ReplyForm';
+import ReplyFormReview2 from '../../../../components/tour-single/ReplyFormReview2';
+import CallToActions from '../../../../components/common/CallToActions';
+import Tours from '../../../../components/tours/Tours';
+import Faq from '../../../../components/faq/Faq';
+import Link from '../../../../../../../adapters/link';
+import Itinerary from '../../../../components/tour-single/itinerary';
+import ImportantInfo from '../../../../components/tour-single/ImportantInfo';
+import TourGallery from '../../../../components/tour-single/TourGallery';
 
 export const metadata = {
   title: "Tour Details | Flymefy - Your Ultimate Travel Companion",

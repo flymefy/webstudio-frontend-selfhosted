@@ -1,10 +1,10 @@
-import Wrapper from "@/components/layout/Wrapper";
-import CallToActions from "@/components/common/CallToActions";
-import WhyChoose from "@/components/block/BlockGuide";
-import Address from "@/components/block/Address";
-import Social from "@/components/common/social/Social";
-import ContactForm from "@/components/common/ContactForm";
-import LocationTopBar from "@/components/common/LocationTopBar";
+import Wrapper from '../../../components/layout/Wrapper';
+import CallToActions from '../../../components/common/CallToActions';
+import WhyChoose from '../../../components/block/BlockGuide';
+import Address from '../../../components/block/Address';
+import Social from '../../../components/common/social/Social';
+import ContactForm from '../../../components/common/ContactForm';
+import LocationTopBar from '../../../components/common/LocationTopBar';
 
 export const metadata = {
   title: "Contact Us | Flymefy - Your Ultimate Travel Companion",

@@ -1,11 +1,11 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header3 from "@/components/header/header-3";
-import Footer3 from "@/components/footer/footer-3";
-import MainFilterSearchBox from "@/components/tour-list/tour-list-v1/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/tour-list/tour-list-v1/TopHeaderFilter";
-import TourProperties from "@/components/tour-list/tour-list-v1/TourProperties";
-import Pagination from "@/components/tour-list/common/Pagination";
-import Sidebar from "@/components/tour-list/tour-list-v1/Sidebar";
+import CallToActions from '../../../components/common/CallToActions';
+import Header3 from '../../../components/header/header-3';
+import Footer3 from '../../../components/footer/footer-3';
+import MainFilterSearchBox from '../../../components/tour-list/tour-list-v1/MainFilterSearchBox';
+import TopHeaderFilter from '../../../components/tour-list/tour-list-v1/TopHeaderFilter';
+import TourProperties from '../../../components/tour-list/tour-list-v1/TourProperties';
+import Pagination from '../../../components/tour-list/common/Pagination';
+import Sidebar from '../../../components/tour-list/tour-list-v1/Sidebar';
 
 export const metadata = {
   title: "Tour List v1 || GoTrip - Travel & Tour React NextJS Template",

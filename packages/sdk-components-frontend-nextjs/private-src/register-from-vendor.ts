@@ -86,6 +86,11 @@ function transformSourceForAdapters(src: string) {
     /from\s+["']next\/image["']/g,
     "from './adapters/next-image'"
   );
+  // Replace next/dynamic import to adapter
+  src = src.replace(
+    /from\s+["']next\/dynamic["']/g,
+    "from './adapters/next-dynamic'"
+  );
   // Replace react-router-dom import to adapter link
   src = src.replace(
     /from\s+["']react-router-dom["']/g,

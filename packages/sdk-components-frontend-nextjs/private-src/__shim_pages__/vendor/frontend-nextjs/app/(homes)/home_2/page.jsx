@@ -1,19 +1,19 @@
-import dynamic from "next/dynamic";
-import Blog4 from "@/components/blog/Blog4";
-import Brand2 from "@/components/brand/Brand2";
-import Footer3 from "@/components/footer/footer-3";
-import Header3 from "@/components/header/header-3";
-import Hero10 from "@/components/hero/hero-10";
-import AppBanner from "@/components/home/home-2/AppBanner";
-import BlockGuide from "@/components/home/home-2/BlockGuide";
-import CallToActions from "@/components/home/home-2/CallToActions";
-import Subscribe from "@/components/home/home-2/Subscribe";
-import Testimonial from "@/components/home/home-2/Testimonial";
-import TestimonialRating from "@/components/home/home-2/TestimonialRating";
-import Flights from "@/components/flight/Flights";
-import TopDestinations from "@/components/destinations/TopDestinations";
-import AddBanner from "@/components/add-banner/AddBanner";
-import Link from "next/link";
+import dynamic from '../../../../../../adapters/next-dynamic';
+import Blog4 from '../../../components/blog/Blog4';
+import Brand2 from '../../../components/brand/Brand2';
+import Footer3 from '../../../components/footer/footer-3';
+import Header3 from '../../../components/header/header-3';
+import Hero10 from '../../../components/hero/hero-10';
+import AppBanner from '../../../components/home/home-2/AppBanner';
+import BlockGuide from '../../../components/home/home-2/BlockGuide';
+import CallToActions from '../../../components/home/home-2/CallToActions';
+import Subscribe from '../../../components/home/home-2/Subscribe';
+import Testimonial from '../../../components/home/home-2/Testimonial';
+import TestimonialRating from '../../../components/home/home-2/TestimonialRating';
+import Flights from '../../../components/flight/Flights';
+import TopDestinations from '../../../components/destinations/TopDestinations';
+import AddBanner from '../../../components/add-banner/AddBanner';
+import Link from '../../../../../../adapters/link';
 
 export const metadata = {
   title: "Flight Deals & Offers || Flymefy - Best Flight Booking Platform",

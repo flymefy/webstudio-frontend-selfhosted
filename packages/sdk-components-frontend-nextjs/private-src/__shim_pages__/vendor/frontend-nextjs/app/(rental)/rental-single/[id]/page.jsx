@@ -1,18 +1,18 @@
 
-import rentalsData from "@/data/rentals";
-import Wrapper from "@/components/layout/Wrapper";
-import Overview from "@/components/rental-single/Overview";
-import PropertyHighlights from "@/components/rental-single/PropertyHighlights";
-import TopBreadCrumb from "@/components/rental-single/TopBreadCrumb";
-import SidebarRight from "@/components/rental-single/SidebarRight";
-import ReviewProgress2 from "@/components/rental-single/guest-reviews/ReviewProgress2";
-import DetailsReview2 from "@/components/rental-single/guest-reviews/DetailsReview2";
-import ReplyForm from "@/components/rental-single/ReplyForm";
-import ReplyFormReview2 from "@/components/rental-single/ReplyFormReview2";
-import CallToActions from "@/components/common/CallToActions";
-import SlideGallery from "@/components/rental-single/SlideGallery";
-import MapPropertyFinder from "@/components/rental-single/MapPropertyFinder";
-import HelpfulFacts from "@/components/rental-single/HelpfulFacts";
+import rentalsData from '../../../../data/rentals';
+import Wrapper from '../../../../components/layout/Wrapper';
+import Overview from '../../../../components/rental-single/Overview';
+import PropertyHighlights from '../../../../components/rental-single/PropertyHighlights';
+import TopBreadCrumb from '../../../../components/rental-single/TopBreadCrumb';
+import SidebarRight from '../../../../components/rental-single/SidebarRight';
+import ReviewProgress2 from '../../../../components/rental-single/guest-reviews/ReviewProgress2';
+import DetailsReview2 from '../../../../components/rental-single/guest-reviews/DetailsReview2';
+import ReplyForm from '../../../../components/rental-single/ReplyForm';
+import ReplyFormReview2 from '../../../../components/rental-single/ReplyFormReview2';
+import CallToActions from '../../../../components/common/CallToActions';
+import SlideGallery from '../../../../components/rental-single/SlideGallery';
+import MapPropertyFinder from '../../../../components/rental-single/MapPropertyFinder';
+import HelpfulFacts from '../../../../components/rental-single/HelpfulFacts';
 
 export const metadata = {
   title: "Rental Details | Flymefy - Your Ultimate Travel Companion",

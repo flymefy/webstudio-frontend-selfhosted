@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useParams } from "next/navigation";
-import Header3 from "@/components/header/header-3";
-import Footer3 from "@/components/footer/footer-3";
+import { useParams } from '../../../../../../../adapters/next-navigation';
+import Header3 from '../../../../components/header/header-3';
+import Footer3 from '../../../../components/footer/footer-3';
 
 const FlightBookingPage = () => {
   const params = useParams();

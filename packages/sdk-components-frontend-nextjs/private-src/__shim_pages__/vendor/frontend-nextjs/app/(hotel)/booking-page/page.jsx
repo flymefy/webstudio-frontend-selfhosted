@@ -1,8 +1,8 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header3 from "@/components/header/header-3";
-import Footer3 from "@/components/footer/footer-3";
-import StepperBooking from "@/components/booking-page/stepper-booking";
-import LoginModal from "@/components/common/LoginModal";
+import CallToActions from '../../../components/common/CallToActions';
+import Header3 from '../../../components/header/header-3';
+import Footer3 from '../../../components/footer/footer-3';
+import StepperBooking from '../../../components/booking-page/stepper-booking';
+import LoginModal from '../../../components/common/LoginModal';
 
 export const metadata = {
   title: "Hotel Booking Page || GoTrip - Travel & Tour React NextJS Template",

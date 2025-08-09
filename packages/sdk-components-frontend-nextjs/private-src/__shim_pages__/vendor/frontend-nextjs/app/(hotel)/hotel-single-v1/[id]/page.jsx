@@ -1,26 +1,26 @@
 
-import { hotelsData } from "@/data/hotels";
-import Wrapper from "@/components/layout/Wrapper";
-import Overview from "@/components/hotel-single/Overview";
-import PopularFacilities from "@/components/hotel-single/PopularFacilities";
-import PropertyHighlights from "@/components/hotel-single/PropertyHighlights";
-import RatingTag from "@/components/hotel-single/RatingTag";
-import StickyHeader from "@/components/hotel-single/StickyHeader";
-import TopBreadCrumb from "@/components/hotel-single/TopBreadCrumb";
-import SidebarRight from "@/components/hotel-single/SidebarRight";
-import AvailableRooms from "@/components/hotel-single/AvailableRooms";
-import ReviewProgress from "@/components/hotel-single/guest-reviews/ReviewProgress";
-import DetailsReview from "@/components/hotel-single/guest-reviews/DetailsReview";
-import ReplyForm from "@/components/hotel-single/ReplyForm";
-import ReplyFormReview from "@/components/hotel-single/ReplyFormReview";
-import Facilities from "@/components/hotel-single/Facilities";
-import Image from './adapters/next-image';
-import Surroundings from "@/components/hotel-single/Surroundings";
-import HelpfulFacts from "@/components/hotel-single/HelpfulFacts";
-import Faq from "@/components/faq/Faq";
-import Hotels2 from "@/components/hotels/Hotels2";
-import CallToActions from "@/components/common/CallToActions";
-import GalleryOne from "@/components/hotel-single/GalleryOne";
+import { hotelsData } from '../../../../data/hotels';
+import Wrapper from '../../../../components/layout/Wrapper';
+import Overview from '../../../../components/hotel-single/Overview';
+import PopularFacilities from '../../../../components/hotel-single/PopularFacilities';
+import PropertyHighlights from '../../../../components/hotel-single/PropertyHighlights';
+import RatingTag from '../../../../components/hotel-single/RatingTag';
+import StickyHeader from '../../../../components/hotel-single/StickyHeader';
+import TopBreadCrumb from '../../../../components/hotel-single/TopBreadCrumb';
+import SidebarRight from '../../../../components/hotel-single/SidebarRight';
+import AvailableRooms from '../../../../components/hotel-single/AvailableRooms';
+import ReviewProgress from '../../../../components/hotel-single/guest-reviews/ReviewProgress';
+import DetailsReview from '../../../../components/hotel-single/guest-reviews/DetailsReview';
+import ReplyForm from '../../../../components/hotel-single/ReplyForm';
+import ReplyFormReview from '../../../../components/hotel-single/ReplyFormReview';
+import Facilities from '../../../../components/hotel-single/Facilities';
+import Image from '../../../../../../../adapters/next-image';
+import Surroundings from '../../../../components/hotel-single/Surroundings';
+import HelpfulFacts from '../../../../components/hotel-single/HelpfulFacts';
+import Faq from '../../../../components/faq/Faq';
+import Hotels2 from '../../../../components/hotels/Hotels2';
+import CallToActions from '../../../../components/common/CallToActions';
+import GalleryOne from '../../../../components/hotel-single/GalleryOne';
 
 export const metadata = {
   title: "Hotel Details | Flymefy - Your Ultimate Travel Companion",

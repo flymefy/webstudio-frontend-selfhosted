@@ -60,13 +60,7 @@ function toLabel(cls: string) {
     .map((n) => `export const ${n}Meta: TemplateMeta = ${n};`);
 
   // ensure imports
-  if (!content.includes("imagePlaceholderDataUrl")) {
-    content = content.replace(
-      /import\s+\{([^}]+)\}\s+from\s+"@webstudio-is\/template";/,
-      (m) =>
-        m + `\nimport { imagePlaceholderDataUrl } from "@webstudio-is/image";`
-    );
-  }
+  // imagePlaceholderDataUrl is defined inline by register-pages header
 
   const block = `\n// __SECTIONS_START__\n${sections.join("\n")}\n${exportLines.join(
     "\n"

@@ -1,7 +1,7 @@
-import Wrapper from "@/components/layout/Wrapper";
-import CallToActions from "@/components/common/CallToActions";
-import LoginWithSocial from "@/components/common/LoginWithSocial";
-import LoginForm from "@/components/common/LoginForm";
+import Wrapper from '../../../components/layout/Wrapper';
+import CallToActions from '../../../components/common/CallToActions';
+import LoginWithSocial from '../../../components/common/LoginWithSocial';
+import LoginForm from '../../../components/common/LoginForm';
 
 export const metadata = {
   title: "Login | Flymefy - Your Ultimate Travel Companion",

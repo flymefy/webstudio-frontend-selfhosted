@@ -1,17 +1,17 @@
-import dynamic from "next/dynamic";
-import Header3 from "@/components/header/header-3";
-import Hero10 from "@/components/hero/hero-10";
-import FlightSearchEngine from "@/components/flight-list/flight-list-v1/FlightSearchEngine";
-import Link from "next/link";
-import Footer3 from "@/components/footer/footer-3";
-import Blog from "@/components/blog/Blog3";
-import BlockGuide from "@/components/block/BlockGuide";
-import Flights from "@/components/flight/Flights";
-import AppBanner from "@/components/home/home-10/AppBanner";
-import TopDestinations from "@/components/home/home-10/TopDestinations";
-import TestimonialRating from "@/components/home/home-10/TestimonialRating";
-import Testimonial from "@/components/home/home-10/Testimonial";
-import PopularRoutes from "@/components/home/home-10/PopularRoutes";
+import dynamic from '../../../../../../adapters/next-dynamic';
+import Header3 from '../../../components/header/header-3';
+import Hero10 from '../../../components/hero/hero-10';
+import FlightSearchEngine from '../../../components/flight-list/flight-list-v1/FlightSearchEngine';
+import Link from '../../../../../../adapters/link';
+import Footer3 from '../../../components/footer/footer-3';
+import Blog from '../../../components/blog/Blog3';
+import BlockGuide from '../../../components/block/BlockGuide';
+import Flights from '../../../components/flight/Flights';
+import AppBanner from '../../../components/home/home-10/AppBanner';
+import TopDestinations from '../../../components/home/home-10/TopDestinations';
+import TestimonialRating from '../../../components/home/home-10/TestimonialRating';
+import Testimonial from '../../../components/home/home-10/Testimonial';
+import PopularRoutes from '../../../components/home/home-10/PopularRoutes';
 
 export const metadata = {
   title: "Home-10 || GoTrip - Travel & Tour React NextJS Template",

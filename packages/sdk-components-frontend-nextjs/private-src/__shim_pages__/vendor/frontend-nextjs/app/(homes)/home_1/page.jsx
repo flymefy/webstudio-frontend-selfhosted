@@ -1,17 +1,17 @@
-import dynamic from "next/dynamic";
-import AddBanner from "@/components/add-banner/AddBanner";
-import PopularDestinations from "@/components/destinations/PopularDestinations";
-import Footer3 from "@/components/footer/footer-3";
-import Header3 from "@/components/header/header-3";
-import Hero3 from "@/components/hero/hero-3";
-import BlockGuide from "@/components/block/BlockGuide";
-import Blog from "@/components/blog/Blog3";
-import CallToActions from "@/components/common/CallToActions";
-import Destinations from "@/components/home/home-1/Destinations";
-import Testimonial from "@/components/home/home-1/Testimonial";
-import TestimonialLeftCol from "@/components/home/home-1/TestimonialLeftCol";
-import Hotels from "@/components/hotels/Hotels";
-import SelectFilter from "@/components/hotels/filter-tabs/SelectFilter";
+import dynamic from '../../../../../../adapters/next-dynamic';
+import AddBanner from '../../../components/add-banner/AddBanner';
+import PopularDestinations from '../../../components/destinations/PopularDestinations';
+import Footer3 from '../../../components/footer/footer-3';
+import Header3 from '../../../components/header/header-3';
+import Hero3 from '../../../components/hero/hero-3';
+import BlockGuide from '../../../components/block/BlockGuide';
+import Blog from '../../../components/blog/Blog3';
+import CallToActions from '../../../components/common/CallToActions';
+import Destinations from '../../../components/home/home-1/Destinations';
+import Testimonial from '../../../components/home/home-1/Testimonial';
+import TestimonialLeftCol from '../../../components/home/home-1/TestimonialLeftCol';
+import Hotels from '../../../components/hotels/Hotels';
+import SelectFilter from '../../../components/hotels/filter-tabs/SelectFilter';
 
 const Home_1 = () => {
   return (

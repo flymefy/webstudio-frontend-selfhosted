@@ -1,5 +1,6 @@
 import { type TemplateMeta, $, ws, css } from "@webstudio-is/template";
-import { imagePlaceholderDataUrl } from "@webstudio-is/image";
+const imagePlaceholderDataUrl =
+  "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='96' height='64'><rect width='100%' height='100%' fill='%23f3f4f6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%239ca3af' font-size='12'>preview</text></svg>";
 
 export const page_page_jsx_template = {
   category: "pages",

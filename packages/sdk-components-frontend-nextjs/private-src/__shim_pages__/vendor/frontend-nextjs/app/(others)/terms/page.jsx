@@ -1,5 +1,5 @@
-import Wrapper from "@/components/layout/Wrapper";
-import CallToActions from "@/components/common/CallToActions";
+import Wrapper from '../../../components/layout/Wrapper';
+import CallToActions from '../../../components/common/CallToActions';
 
 export const metadata = {
   title: "Terms & Conditions | Flymefy - Your Ultimate Travel Companion",

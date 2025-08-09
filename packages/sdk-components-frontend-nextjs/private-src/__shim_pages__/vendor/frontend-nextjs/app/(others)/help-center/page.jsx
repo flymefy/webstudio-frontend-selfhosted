@@ -1,7 +1,7 @@
-import Wrapper from "@/components/layout/Wrapper";
-import CallToActions from "@/components/common/CallToActions";
-import Faq from "@/components/faq/Faq";
-import ContactForm from "@/components/common/ContactForm";
+import Wrapper from '../../../components/layout/Wrapper';
+import CallToActions from '../../../components/common/CallToActions';
+import Faq from '../../../components/faq/Faq';
+import ContactForm from '../../../components/common/ContactForm';
 
 export const metadata = {
   title: "Help Center | Flymefy - Your Ultimate Travel Companion",

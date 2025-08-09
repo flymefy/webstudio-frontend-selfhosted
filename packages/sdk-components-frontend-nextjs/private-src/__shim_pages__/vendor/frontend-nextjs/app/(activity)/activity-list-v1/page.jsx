@@ -1,11 +1,11 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header3 from "@/components/header/header-3";
-import Footer3 from "@/components/footer/footer-3";
-import MainFilterSearchBox from "@/components/activity-list/activity-list-v1/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/activity-list/activity-list-v1/TopHeaderFilter";
-import ActivityProperties from "@/components/activity-list/activity-list-v1/ActivityProperties";
-import Pagination from "@/components/activity-list/common/Pagination";
-import Sidebar from "@/components/activity-list/activity-list-v1/Sidebar";
+import CallToActions from '../../../components/common/CallToActions';
+import Header3 from '../../../components/header/header-3';
+import Footer3 from '../../../components/footer/footer-3';
+import MainFilterSearchBox from '../../../components/activity-list/activity-list-v1/MainFilterSearchBox';
+import TopHeaderFilter from '../../../components/activity-list/activity-list-v1/TopHeaderFilter';
+import ActivityProperties from '../../../components/activity-list/activity-list-v1/ActivityProperties';
+import Pagination from '../../../components/activity-list/common/Pagination';
+import Sidebar from '../../../components/activity-list/activity-list-v1/Sidebar';
 
 export const metadata = {
   title: "Activity List v1 || GoTrip - Travel & Tour React NextJS Template",

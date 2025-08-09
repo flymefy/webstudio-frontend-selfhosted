@@ -1,18 +1,18 @@
-import dynamic from "next/dynamic";
-import Header3 from "@/components/header/header-3";
-import Hero10 from "@/components/hero/hero-10";
-import TopDestinations from "@/components/destinations/TopDestinations";
-import Hotels from "@/components/hotels/Hotels2";
-import Link from "next/link";
-import Tours from "@/components/tours/Tours";
-import Activity from "@/components/activity/Activity";
-import Rentals from "@/components/rentals/Rentals";
-import Cars from "@/components/cars/Cars";
-import Cruise from "@/components/cruise/Cruise";
-import Flights from "@/components/flight/Flights";
-import Footer3 from "@/components/footer/footer-3";
-import AddBanner from "@/components/home/home-3/AddBanner";
-import WhyChoose from "@/components/home/home-3/WhyChoose";
+import dynamic from '../../../../../../adapters/next-dynamic';
+import Header3 from '../../../components/header/header-3';
+import Hero10 from '../../../components/hero/hero-10';
+import TopDestinations from '../../../components/destinations/TopDestinations';
+import Hotels from '../../../components/hotels/Hotels2';
+import Link from '../../../../../../adapters/link';
+import Tours from '../../../components/tours/Tours';
+import Activity from '../../../components/activity/Activity';
+import Rentals from '../../../components/rentals/Rentals';
+import Cars from '../../../components/cars/Cars';
+import Cruise from '../../../components/cruise/Cruise';
+import Flights from '../../../components/flight/Flights';
+import Footer3 from '../../../components/footer/footer-3';
+import AddBanner from '../../../components/home/home-3/AddBanner';
+import WhyChoose from '../../../components/home/home-3/WhyChoose';
 
 export const metadata = {
   title: "Home-3 || GoTrip - Travel & Tour React NextJS Template",

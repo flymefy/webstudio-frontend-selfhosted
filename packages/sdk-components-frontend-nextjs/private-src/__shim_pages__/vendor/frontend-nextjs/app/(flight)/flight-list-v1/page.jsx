@@ -1,15 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
-import Head from "next/head";
-import Header3 from "@/components/header/header-3";
-import Footer3 from "@/components/footer/footer-3";
-import FlightSearchEngine from "@/components/flight-list/flight-list-v1/FlightSearchEngine";
-import FlightResults from "@/components/flight-list/flight-list-v1/FlightResults";
-import FlightFilters from "@/components/flight-list/common/FlightFilters";
-import AirlineFilter from '@/components/flight-list/common/AirlineFilter';
-import TimeFilter from '@/components/flight-list/common/TimeFilter';
-import FlightCard from '@/components/flight-list/common/FlightCard';
-import FlightCardSkeleton from '@/components/flight-list/common/FlightCardSkeleton';
+import Head from '../../../../../../adapters/next-head';
+import Header3 from '../../../components/header/header-3';
+import Footer3 from '../../../components/footer/footer-3';
+import FlightSearchEngine from '../../../components/flight-list/flight-list-v1/FlightSearchEngine';
+import FlightResults from '../../../components/flight-list/flight-list-v1/FlightResults';
+import FlightFilters from '../../../components/flight-list/common/FlightFilters';
+import AirlineFilter from '../../../components/flight-list/common/AirlineFilter';
+import TimeFilter from '../../../components/flight-list/common/TimeFilter';
+import FlightCard from '../../../components/flight-list/common/FlightCard';
+import FlightCardSkeleton from '../../../components/flight-list/common/FlightCardSkeleton';
 
 export default function FlightListPage() {
   const [flights, setFlights] = useState([]);

@@ -1,16 +1,16 @@
-import dynamic from "next/dynamic";
-import PopularDestinations from "@/components/destinations/PopularDestinations";
-import Footer3 from "@/components/footer/footer-3";
-import Header3 from "@/components/header/header-3";
-import Hero10 from "@/components/hero/hero-10";
-import BlockGuide from "@/components/home/home-6/BlockGuide";
-import AddBanner from "@/components/home/home-6/AddBanner";
-import TourCategories from "@/components/home/home-6/TourCategories";
-import Cruise from "@/components/cruise/Cruise";
-import Blog from "@/components/home/home-6/Blog";
-import AppBanner from "@/components/home/home-6/AppBanner";
-import Testimonials from "@/components/home/home-6/Testimonials";
-import Cruise2 from "@/components/cruise/Cruise";
+import dynamic from '../../../../../../adapters/next-dynamic';
+import PopularDestinations from '../../../components/destinations/PopularDestinations';
+import Footer3 from '../../../components/footer/footer-3';
+import Header3 from '../../../components/header/header-3';
+import Hero10 from '../../../components/hero/hero-10';
+import BlockGuide from '../../../components/home/home-6/BlockGuide';
+import AddBanner from '../../../components/home/home-6/AddBanner';
+import TourCategories from '../../../components/home/home-6/TourCategories';
+import Cruise from '../../../components/cruise/Cruise';
+import Blog from '../../../components/home/home-6/Blog';
+import AppBanner from '../../../components/home/home-6/AppBanner';
+import Testimonials from '../../../components/home/home-6/Testimonials';
+import Cruise2 from '../../../components/cruise/Cruise';
 
 export const metadata = {
   title: "Home-6 || GoTrip - Travel & Tour React NextJS Template",

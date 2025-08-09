@@ -1,16 +1,16 @@
-import dynamic from "next/dynamic";
-import Header3 from "@/components/header/header-3";
-import Hero10 from "@/components/hero/hero-10";
-import BlockGuide from "@/components/block/BlockGuide";
-import AddBanner from "@/components/home/home-6/AddBanner";
-import PopularDestinations from "@/components/destinations/PopularDestinations";
-import Testimonials from "@/components/home/home-6/Testimonials";
-import AppBanner from "@/components/home/home-6/AppBanner";
-import Blog from "@/components/home/home-6/Blog";
-import Footer3 from "@/components/footer/footer-3";
-import Cruise from "@/components/cruise/Cruise";
-import Cruise2 from "@/components/cruise/Cruise2";
-import TourCategories from "@/components/home/home-5/TourCategories";
+import dynamic from '../../../../../adapters/next-dynamic';
+import Header3 from '../../components/header/header-3';
+import Hero10 from '../../components/hero/hero-10';
+import BlockGuide from '../../components/block/BlockGuide';
+import AddBanner from '../../components/home/home-6/AddBanner';
+import PopularDestinations from '../../components/destinations/PopularDestinations';
+import Testimonials from '../../components/home/home-6/Testimonials';
+import AppBanner from '../../components/home/home-6/AppBanner';
+import Blog from '../../components/home/home-6/Blog';
+import Footer3 from '../../components/footer/footer-3';
+import Cruise from '../../components/cruise/Cruise';
+import Cruise2 from '../../components/cruise/Cruise2';
+import TourCategories from '../../components/home/home-5/TourCategories';
 
 export const metadata = {
   title: "Cruises || Flymefy - Sail Luxury Seas in Style",

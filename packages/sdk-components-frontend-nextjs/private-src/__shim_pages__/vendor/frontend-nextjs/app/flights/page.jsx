@@ -1,17 +1,17 @@
-import dynamic from "next/dynamic";
-import Footer3 from "@/components/footer/footer-3";
-import Header3 from "@/components/header/header-3";
-import Hero10 from "@/components/hero/hero-10";
-import BlockGuide from "@/components/home/home-2/BlockGuide";
-import Testimonial from "@/components/home/home-2/Testimonial";
-import TestimonialRating from "@/components/home/home-2/TestimonialRating";
-import Link from "next/link";
-import TopDestinations from "@/components/destinations/TopDestinations";
-import Flights from "@/components/flight/Flights";
-import AddBanner from "@/components/add-banner/AddBanner";
-import Brand2 from "@/components/brand/Brand2";
-import Blog4 from "@/components/blog/Blog4";
-import Subscribe from "@/components/home/home-2/Subscribe";
+import dynamic from '../../../../../adapters/next-dynamic';
+import Footer3 from '../../components/footer/footer-3';
+import Header3 from '../../components/header/header-3';
+import Hero10 from '../../components/hero/hero-10';
+import BlockGuide from '../../components/home/home-2/BlockGuide';
+import Testimonial from '../../components/home/home-2/Testimonial';
+import TestimonialRating from '../../components/home/home-2/TestimonialRating';
+import Link from '../../../../../adapters/link';
+import TopDestinations from '../../components/destinations/TopDestinations';
+import Flights from '../../components/flight/Flights';
+import AddBanner from '../../components/add-banner/AddBanner';
+import Brand2 from '../../components/brand/Brand2';
+import Blog4 from '../../components/blog/Blog4';
+import Subscribe from '../../components/home/home-2/Subscribe';
 
 export const metadata = {
   title: "Flights || Flymefy - Book Flights Instantly",

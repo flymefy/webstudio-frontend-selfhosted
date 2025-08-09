@@ -1,17 +1,17 @@
 
-import cruiseData from "@/data/cruise";
-import Wrapper from "@/components/layout/Wrapper";
-import Overview from "@/components/cruise-single/Overview";
-import TopBreadCrumb from "@/components/cruise-single/TopBreadCrumb";
-import SidebarRight from "@/components/cruise-single/SidebarRight";
-import ReviewProgress from "@/components/cruise-single/guest-reviews/ReviewProgress";
-import DetailsReview from "@/components/cruise-single/guest-reviews/DetailsReview";
-import ReplyForm from "@/components/cruise-single/ReplyForm";
-import ReplyFormReview from "@/components/cruise-single/ReplyFormReview";
-import Facilities from "@/components/cruise-single/Facilities";
-import CallToActions from "@/components/common/CallToActions";
-import MapPropertyFinder from "@/components/cruise-single/MapPropertyFinder";
-import GalleryCruiseSlider from "@/components/cruise-single/GalleryCruiseSlider";
+import cruiseData from '../../../../data/cruise';
+import Wrapper from '../../../../components/layout/Wrapper';
+import Overview from '../../../../components/cruise-single/Overview';
+import TopBreadCrumb from '../../../../components/cruise-single/TopBreadCrumb';
+import SidebarRight from '../../../../components/cruise-single/SidebarRight';
+import ReviewProgress from '../../../../components/cruise-single/guest-reviews/ReviewProgress';
+import DetailsReview from '../../../../components/cruise-single/guest-reviews/DetailsReview';
+import ReplyForm from '../../../../components/cruise-single/ReplyForm';
+import ReplyFormReview from '../../../../components/cruise-single/ReplyFormReview';
+import Facilities from '../../../../components/cruise-single/Facilities';
+import CallToActions from '../../../../components/common/CallToActions';
+import MapPropertyFinder from '../../../../components/cruise-single/MapPropertyFinder';
+import GalleryCruiseSlider from '../../../../components/cruise-single/GalleryCruiseSlider';
 
 export const metadata = {
   title: "Cruise Details | Flymefy - Your Ultimate Travel Companion",

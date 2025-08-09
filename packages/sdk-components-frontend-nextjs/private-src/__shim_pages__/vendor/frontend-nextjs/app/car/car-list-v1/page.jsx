@@ -1,12 +1,12 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header3 from "@/components/header/header-3";
-import Footer3 from "@/components/footer/footer-3";
-import MainFilterSearchBox from "@/components/car-list/car-list-v1/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/car-list/car-list-v1/TopHeaderFilter";
-import Pagination from "@/components/car-list/common/Pagination";
-import Sidebar from "@/components/car-list/car-list-v1/Sidebar";
-import CarPropertes from "@/components/car-list/car-list-v1/CarPropertes";
-import Link from "next/link";
+import CallToActions from '../../../components/common/CallToActions';
+import Header3 from '../../../components/header/header-3';
+import Footer3 from '../../../components/footer/footer-3';
+import MainFilterSearchBox from '../../../components/car-list/car-list-v1/MainFilterSearchBox';
+import TopHeaderFilter from '../../../components/car-list/car-list-v1/TopHeaderFilter';
+import Pagination from '../../../components/car-list/common/Pagination';
+import Sidebar from '../../../components/car-list/car-list-v1/Sidebar';
+import CarPropertes from '../../../components/car-list/car-list-v1/CarPropertes';
+import Link from '../../../../../../adapters/link';
 
 export const metadata = {
   title: "Car List v1 || GoTrip - Travel & Tour React NextJS Template",

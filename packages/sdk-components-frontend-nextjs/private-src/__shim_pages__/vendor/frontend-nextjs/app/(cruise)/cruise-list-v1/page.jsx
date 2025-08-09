@@ -1,11 +1,11 @@
-import CallToActions from "@/components/common/CallToActions";
-import Header3 from "@/components/header/header-3";
-import Footer3 from "@/components/footer/footer-3";
-import MainFilterSearchBox from "@/components/cruise-list/cruise-list-v1/MainFilterSearchBox";
-import TopHeaderFilter from "@/components/cruise-list/cruise-list-v1/TopHeaderFilter";
-import CruiseProperties from "@/components/cruise-list/cruise-list-v1/CruiseProperties";
-import Pagination from "@/components/cruise-list/common/Pagination";
-import Sidebar from "@/components/cruise-list/cruise-list-v1/Sidebar";
+import CallToActions from '../../../components/common/CallToActions';
+import Header3 from '../../../components/header/header-3';
+import Footer3 from '../../../components/footer/footer-3';
+import MainFilterSearchBox from '../../../components/cruise-list/cruise-list-v1/MainFilterSearchBox';
+import TopHeaderFilter from '../../../components/cruise-list/cruise-list-v1/TopHeaderFilter';
+import CruiseProperties from '../../../components/cruise-list/cruise-list-v1/CruiseProperties';
+import Pagination from '../../../components/cruise-list/common/Pagination';
+import Sidebar from '../../../components/cruise-list/cruise-list-v1/Sidebar';
 
 export const metadata = {
   title: "Cruise List v1 || GoTrip - Travel & Tour React NextJS Template",

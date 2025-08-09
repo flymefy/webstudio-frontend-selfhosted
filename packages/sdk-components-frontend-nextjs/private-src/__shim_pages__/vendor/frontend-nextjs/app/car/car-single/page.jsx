@@ -1,11 +1,11 @@
-import BookingInfo from '@/components/car-single/BookingInfo';
-import CarInfo from '@/components/car-single/CarInfo';
-import CoverageOptions from '@/components/car-single/CoverageOptions';
-import OptionalExtras from '@/components/car-single/OptionalExtras';
-import UpgradeCar from '@/components/car-single/UpgradeCar';
-import Summary from '@/components/car-single/Summary';
-import DriverForm from '@/components/car-single/DriverForm';
-import Reviews from '@/components/car-single/Reviews';
+import BookingInfo from '../../../components/car-single/BookingInfo';
+import CarInfo from '../../../components/car-single/CarInfo';
+import CoverageOptions from '../../../components/car-single/CoverageOptions';
+import OptionalExtras from '../../../components/car-single/OptionalExtras';
+import UpgradeCar from '../../../components/car-single/UpgradeCar';
+import Summary from '../../../components/car-single/Summary';
+import DriverForm from '../../../components/car-single/DriverForm';
+import Reviews from '../../../components/car-single/Reviews';
 
 export default function CarSinglePage() {
   return (

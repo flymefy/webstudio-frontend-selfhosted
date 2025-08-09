@@ -1955,6 +1955,9 @@ importers:
 
   packages/sdk-components-frontend-nextjs:
     dependencies:
+      '@webstudio-is/image':
+        specifier: workspace:*
+        version: link:../image
       '@webstudio-is/react-sdk':
         specifier: workspace:*
         version: link:../react-sdk

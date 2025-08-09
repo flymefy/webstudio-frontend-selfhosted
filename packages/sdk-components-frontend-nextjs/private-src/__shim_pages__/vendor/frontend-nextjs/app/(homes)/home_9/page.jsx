@@ -1,17 +1,17 @@
-import dynamic from "next/dynamic";
-import Footer3 from "@/components/footer/footer-3";
-import Header3 from "@/components/header/header-3";
-import Hero10 from "@/components/hero/hero-10";
-import HeaderDefault from "@/components/header/default-header";
-import Blog4 from "@/components/blog/Blog4";
-import Testimonial from "@/components/home/home-9/Testimonial";
-import PopularDestinations from "@/components/home/home-9/PoularDestinations";
-import Cruise2 from "@/components/cruise/Cruise2";
-import Link from "next/link";
-import AboutIntro from "@/components/home/home-9/AboutIntro";
-import WhyChoose from "@/components/home/home-9/WhyChoose";
-import Cruise3 from "@/components/cruise/Cruise3";
-import SearchBoxContent from "@/components/hero/hero-9/SearchBoxContent";
+import dynamic from '../../../../../../adapters/next-dynamic';
+import Footer3 from '../../../components/footer/footer-3';
+import Header3 from '../../../components/header/header-3';
+import Hero10 from '../../../components/hero/hero-10';
+import HeaderDefault from '../../../components/header/default-header';
+import Blog4 from '../../../components/blog/Blog4';
+import Testimonial from '../../../components/home/home-9/Testimonial';
+import PopularDestinations from '../../../components/home/home-9/PoularDestinations';
+import Cruise2 from '../../../components/cruise/Cruise2';
+import Link from '../../../../../../adapters/link';
+import AboutIntro from '../../../components/home/home-9/AboutIntro';
+import WhyChoose from '../../../components/home/home-9/WhyChoose';
+import Cruise3 from '../../../components/cruise/Cruise3';
+import SearchBoxContent from '../../../components/hero/hero-9/SearchBoxContent';
 
 export const metadata = {
   title: "Home-9 || GoTrip - Travel & Tour React NextJS Template",

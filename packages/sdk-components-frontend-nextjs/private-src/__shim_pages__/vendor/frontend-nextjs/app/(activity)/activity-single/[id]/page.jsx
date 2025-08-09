@@ -1,21 +1,21 @@
 
-import activityData from "@/data/activity";
-import Wrapper from "@/components/layout/Wrapper";
-import Overview from "@/components/activity-single/Overview";
-import TourSnapShot from "@/components/activity-single/TourSnapShot";
-import TopBreadCrumb from "@/components/activity-single/TopBreadCrumb";
-import SidebarRight from "@/components/activity-single/SidebarRight";
-import ReviewProgress2 from "@/components/activity-single/guest-reviews/ReviewProgress2";
-import DetailsReview2 from "@/components/activity-single/guest-reviews/DetailsReview2";
-import ReplyForm from "@/components/activity-single/ReplyForm";
-import ReplyFormReview2 from "@/components/activity-single/ReplyFormReview2";
-import CallToActions from "@/components/common/CallToActions";
-import Tours from "@/components/tours/Tours";
-import Faq from "@/components/faq/Faq";
-import Link from "next/link";
-import ImportantInfo from "@/components/activity-single/ImportantInfo";
-import SlideGallery from "@/components/activity-single/SlideGallery";
-import MapPropertyFinder from "@/components/activity-single/MapPropertyFinder";
+import activityData from '../../../../data/activity';
+import Wrapper from '../../../../components/layout/Wrapper';
+import Overview from '../../../../components/activity-single/Overview';
+import TourSnapShot from '../../../../components/activity-single/TourSnapShot';
+import TopBreadCrumb from '../../../../components/activity-single/TopBreadCrumb';
+import SidebarRight from '../../../../components/activity-single/SidebarRight';
+import ReviewProgress2 from '../../../../components/activity-single/guest-reviews/ReviewProgress2';
+import DetailsReview2 from '../../../../components/activity-single/guest-reviews/DetailsReview2';
+import ReplyForm from '../../../../components/activity-single/ReplyForm';
+import ReplyFormReview2 from '../../../../components/activity-single/ReplyFormReview2';
+import CallToActions from '../../../../components/common/CallToActions';
+import Tours from '../../../../components/tours/Tours';
+import Faq from '../../../../components/faq/Faq';
+import Link from '../../../../../../../adapters/link';
+import ImportantInfo from '../../../../components/activity-single/ImportantInfo';
+import SlideGallery from '../../../../components/activity-single/SlideGallery';
+import MapPropertyFinder from '../../../../components/activity-single/MapPropertyFinder';
 
 export const metadata = {
   title: "Activity Details | Flymefy - Your Ultimate Travel Companion",

@@ -1,18 +1,18 @@
-import dynamic from "next/dynamic";
-import Footer3 from "@/components/footer/footer-3";
-import Header3 from "@/components/header/header-3";
-import Hero10 from "@/components/hero/hero-10";
-import BlockGuide from "@/components/home/home-8/BlockGuide";
-import Testimonial from "@/components/testimonial/Testimonial";
-import CounterDark from "@/components/counter/CounterDark";
-import Brand from "@/components/brand/Brand";
-import PopularCars from "@/components/home/home-8/PopularCars";
-import TopDestinations from "@/components/home/home-8/TopDestinations";
-import Counter4 from "@/components/counter/Counter4";
-import Faq from "@/components/faq/Faq";
-import AppBanner from "@/components/home/home-8/AppBanner";
-import Blog from "@/components/home/home-8/Blog";
-import Link from "next/link";
+import dynamic from '../../../../../adapters/next-dynamic';
+import Footer3 from '../../components/footer/footer-3';
+import Header3 from '../../components/header/header-3';
+import Hero10 from '../../components/hero/hero-10';
+import BlockGuide from '../../components/home/home-8/BlockGuide';
+import Testimonial from '../../components/testimonial/Testimonial';
+import CounterDark from '../../components/counter/CounterDark';
+import Brand from '../../components/brand/Brand';
+import PopularCars from '../../components/home/home-8/PopularCars';
+import TopDestinations from '../../components/home/home-8/TopDestinations';
+import Counter4 from '../../components/counter/Counter4';
+import Faq from '../../components/faq/Faq';
+import AppBanner from '../../components/home/home-8/AppBanner';
+import Blog from '../../components/home/home-8/Blog';
+import Link from '../../../../../adapters/link';
 
 export const metadata = {
   title: "Cars || Flymefy - Rent Premium Cars Anywhere",
