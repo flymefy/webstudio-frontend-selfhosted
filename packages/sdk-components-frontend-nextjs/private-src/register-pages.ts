@@ -30,7 +30,7 @@ function transformSource(
   aliasPrefix: string,
   adapterPrefix: string
 ) {
-  // Keep css/scss imports for accurate behavior
+  // Keep css/scss imports for accurate behavior, except selected external library CSS
   // Adapt next/image
   src = src.replace(
     /from\s+["']next\/image["']/g,
@@ -66,7 +66,7 @@ function transformSource(
     /from\s+["']react-router-dom["']/g,
     `from '${adapterPrefix}link'`
   );
-  // Remove PhotoSwipe CSS imports (provided globally via vendor-styles.ts)
+  // Remove PhotoSwipe CSS imports (provided globally in app)
   src = src.replace(
     /^\s*import\s+[^;]*['\"]photoswipe\/style\.css['\"];?\s*$/gim,
     ""
@@ -79,7 +79,37 @@ function transformSource(
     /^\s*import\s+[^;]*['\"]photoswipe\/dist\/default-skin\/default-skin\.css['\"];?\s*$/gim,
     ""
   );
-  // Preserve swiper/react, swiper, react-parallax, react-slick imports as-is
+  // Remove external library CSS imports (we include globally in app)
+  src = src.replace(
+    /^\s*import\s+[^;]*['\"]slick-carousel\/slick\/slick\.css['\"];?\s*$/gim,
+    ""
+  );
+  src = src.replace(
+    /^\s*import\s+[^;]*['\"]slick-carousel\/slick\/slick-theme\.css['\"];?\s*$/gim,
+    ""
+  );
+  src = src.replace(
+    /^\s*import\s+[^;]*['\"]rc-slider\/assets\/index\.css['\"];?\s*$/gim,
+    ""
+  );
+  src = src.replace(
+    /^\s*import\s+[^;]*['\"]aos\/dist\/aos\.css['\"];?\s*$/gim,
+    ""
+  );
+  src = src.replace(
+    /^\s*import\s+[^;]*['\"]react-toastify\/dist\/ReactToastify\.css['\"];?\s*$/gim,
+    ""
+  );
+  src = src.replace(
+    /^\s*import\s+[^;]*['\"]react-phone-number-input\/style\.css['\"];?\s*$/gim,
+    ""
+  );
+  // Convert CommonJS exports to ESM for vendor data files
+  src = src.replace(/(^|\n)\s*module\.exports\s*=\s*/g, "$1export default ");
+  src = src.replace(
+    /(^|\n)\s*exports\.([A-Za-z0-9_]+)\s*=\s*/g,
+    "$1export const $2 = "
+  );
   // Resolve @/ alias to vendor root relative
   src = src.replace(/from\s+["']@\/(.+?)["']/g, (_m, p1) => {
     return `from '${aliasPrefix}${p1}'`;
@@ -159,7 +189,7 @@ function mirrorVendorComponents() {
 function mirrorVendorSources() {
   if (!existsSync(vendorRoot)) return;
   const files = fg.sync([
-    `${vendorRoot}/**/*.{js,jsx,ts,tsx}`,
+    `${vendorRoot}/**/*.{js,jsx,ts,tsx,css,scss,json}`,
     `!${appDir}/**/page.{jsx,tsx}`,
     `!${vendorRoot}/node_modules/**`,
     `!${vendorRoot}/**/*.stories.*`,

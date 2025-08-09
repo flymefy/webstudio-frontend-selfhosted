@@ -3,8 +3,7 @@
 import Image from '../../../../../adapters/next-image';
 import Link from '../../../../../adapters/link';
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import cruiseData from "../../data/cruise";
 import isTextMatched from "../../utils/isTextMatched";
 

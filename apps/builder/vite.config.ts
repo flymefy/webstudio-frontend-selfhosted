@@ -81,6 +81,70 @@ export default defineConfig(({ mode }) => {
           find: "@supabase/node-fetch",
           replacement: resolve("./app/shared/empty.ts"),
         },
+        // UI deps used by vendor pages
+        {
+          find: "react-slick",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/react-slick"
+          ),
+        },
+        {
+          find: "swiper/react",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/swiper/react"
+          ),
+        },
+        {
+          find: "swiper",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/swiper"
+          ),
+        },
+        {
+          find: "react-parallax",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/react-parallax"
+          ),
+        },
+        {
+          find: "react-photoswipe-gallery",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/react-photoswipe-gallery"
+          ),
+        },
+        {
+          find: "google-map-react",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/google-map-react"
+          ),
+        },
+        {
+          find: "react-modal-video",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/react-modal-video"
+          ),
+        },
+        {
+          find: "react-toastify",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/react-toastify"
+          ),
+        },
+        {
+          find: "rc-slider",
+          replacement: path.resolve(
+            rootDir ?? __dirname,
+            "node_modules/rc-slider"
+          ),
+        },
       ],
     },
     ssr: {

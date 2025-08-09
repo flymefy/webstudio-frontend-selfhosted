@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     id: 1,
     tag: "LIKELY TO SELL OUT*",

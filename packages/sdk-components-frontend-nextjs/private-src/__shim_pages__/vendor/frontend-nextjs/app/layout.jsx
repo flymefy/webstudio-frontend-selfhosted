@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-cards";
-import "aos/dist/aos.css";
+
 import "../styles/index.scss";
 import "../styles/globals.css";
 import { Provider } from "react-redux";
@@ -16,7 +16,7 @@ import { store } from "../store/store";
 import { AuthProvider } from "../contexts/AuthContext";
 import LoginModal from "../components/common/LoginModal";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import { SelectedCarProvider } from '../contexts/SelectedCarContext';
 import { Inter } from "next/font/google";
 

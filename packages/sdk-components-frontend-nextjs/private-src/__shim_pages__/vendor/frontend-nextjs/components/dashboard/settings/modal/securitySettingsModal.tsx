@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "../../../../../../../adapters/link";
-import "react-phone-number-input/style.css";
+
 import PhoneInput from "react-phone-number-input";
 type PasswordField = "password" | "confirmPassword" | "currentPassword";
 
