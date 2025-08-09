@@ -141,7 +141,11 @@
     "react-multi-date-picker": "^4.5.1",
     "google-map-react": "^2.2.1",
     "react-modal-video": "^2.0.2",
-    "crypto-js": "^4.2.0"
+    "crypto-js": "^4.2.0",
+    "aos": "^2.3.4",
+    "rc-slider": "^10.5.0",
+    "react-toastify": "^10.0.6",
+    "react-pro-sidebar": "^1.1.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.16.5",

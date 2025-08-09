@@ -161,6 +161,10 @@ export default defineConfig(({ mode }) => {
             "node_modules/react-multi-date-picker"
           ),
         },
+        {
+          find: "aos",
+          replacement: path.resolve(__dirname, "node_modules/aos"),
+        },
       ],
     },
     ssr: {
