@@ -10,10 +10,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 45
-    env:
-      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,14 +28,25 @@ jobs:
       - name: Install dependencies (workspace root)
         run: pnpm -w install --no-frozen-lockfile
 
+      - name: Create .vercel/project.json
+        working-directory: apps/builder
+        run: |
+          mkdir -p .vercel
+          cat > .vercel/project.json << 'JSON'
+          {
+            "projectId": "${{ secrets.VERCEL_PROJECT_ID }}",
+            "orgId": "${{ secrets.VERCEL_ORG_ID }}"
+          }
+          JSON
+
       - name: Vercel pull (prepare .vercel)
         working-directory: apps/builder
-        run: npx vercel@latest pull --yes --environment=production --token "$VERCEL_TOKEN"
+        run: npx vercel@latest pull --yes --environment=production --token "${{ secrets.VERCEL_TOKEN }}"
 
       - name: Build (prebuilt output)
         working-directory: apps/builder
-        run: npx vercel@latest build --prod --token "$VERCEL_TOKEN"
+        run: npx vercel@latest build --prod --token "${{ secrets.VERCEL_TOKEN }}"
 
       - name: Deploy to Vercel (Production, prebuilt)
         working-directory: apps/builder
-        run: npx vercel@latest deploy --prebuilt --prod --token "$VERCEL_TOKEN"
+        run: npx vercel@latest deploy --prebuilt --prod --token "${{ secrets.VERCEL_TOKEN }}"
