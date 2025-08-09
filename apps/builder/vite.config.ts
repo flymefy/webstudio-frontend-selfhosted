@@ -154,6 +154,13 @@ export default defineConfig(({ mode }) => {
           find: "swiper",
           replacement: path.resolve(__dirname, "node_modules/swiper"),
         },
+        {
+          find: "react-multi-date-picker",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-multi-date-picker"
+          ),
+        },
       ],
     },
     ssr: {

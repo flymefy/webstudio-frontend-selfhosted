@@ -9,6 +9,15 @@ import { setEnv } from "@webstudio-is/feature-flags";
 import env from "./env/env.server";
 import { useSetFeatures } from "./shared/use-set-features";
 
+// Global vendor styles used by vendor pages/components
+import "react-toastify/dist/ReactToastify.css";
+import "aos/dist/aos.css";
+import "rc-slider/assets/index.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "photoswipe/style.css";
+import "react-phone-number-input/style.css";
+
 export const loader = () => {
   return json({
     features: env.FEATURES,
