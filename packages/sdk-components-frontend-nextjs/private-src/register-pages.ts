@@ -80,6 +80,11 @@ function transformSource(
     /from\s+["']swiper["']/g,
     `from '${adapterPrefix}swiper-core'`
   );
+  // Adapt react-parallax
+  src = src.replace(
+    /from\s+["']react-parallax["']/g,
+    `from '${adapterPrefix}react-parallax'`
+  );
   // Resolve @/ alias to vendor root relative
   src = src.replace(/from\s+["']@\/(.+?)["']/g, (_m, p1) => {
     return `from '${aliasPrefix}${p1}'`;
