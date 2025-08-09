@@ -2,7 +2,7 @@
 'use client'
 
 import { destinations8 } from "../../../data/desinations";
-import Slider from "react-slick";
+import Slider from '../../../../../../adapters/react-slick';
 import Link from '../../../../../../adapters/link';
 
 const TopDestinations = () => {

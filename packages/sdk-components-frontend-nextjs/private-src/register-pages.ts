@@ -85,6 +85,11 @@ function transformSource(
     /from\s+["']react-parallax["']/g,
     `from '${adapterPrefix}react-parallax'`
   );
+  // Adapt react-slick
+  src = src.replace(
+    /from\s+["']react-slick["']/g,
+    `from '${adapterPrefix}react-slick'`
+  );
   // Resolve @/ alias to vendor root relative
   src = src.replace(/from\s+["']@\/(.+?)["']/g, (_m, p1) => {
     return `from '${aliasPrefix}${p1}'`;

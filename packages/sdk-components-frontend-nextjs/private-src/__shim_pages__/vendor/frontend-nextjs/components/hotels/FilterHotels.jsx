@@ -2,7 +2,7 @@
 
 import Image from '../../../../../adapters/next-image';
 import Link from '../../../../../adapters/link';
-import Slider from "react-slick";
+import Slider from '../../../../../adapters/react-slick';
 import { hotelsData } from "../../data/hotels";
 import isTextMatched from "../../utils/isTextMatched";
 import { useEffect, useState } from "react";

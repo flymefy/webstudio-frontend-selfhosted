@@ -1,7 +1,7 @@
 
 'use client'
 
-import Slider from "react-slick";
+import Slider from '../../../../../../adapters/react-slick';
 
 const Categories = () => {
   var settings = {

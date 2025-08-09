@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from '../../../../../adapters/next-image';
-import Slider from "react-slick";
+import Slider from '../../../../../adapters/react-slick';
 import { useRouter } from '../../../../../adapters/next-navigation';
 
 
