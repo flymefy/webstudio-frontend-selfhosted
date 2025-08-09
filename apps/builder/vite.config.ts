@@ -84,10 +84,7 @@ export default defineConfig(({ mode }) => {
         // UI deps used by vendor pages
         {
           find: "react-slick",
-          replacement: path.resolve(
-            rootDir ?? __dirname,
-            "node_modules/react-slick"
-          ),
+          replacement: path.resolve(__dirname, "node_modules/react-slick"),
         },
         {
           find: "react-parallax",
@@ -148,7 +145,10 @@ export default defineConfig(({ mode }) => {
         // Force resolve swiper from this app's node_modules to avoid workspace root lookup
         {
           find: "swiper/react",
-          replacement: path.resolve(__dirname, "node_modules/swiper/react"),
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/swiper/swiper-react.mjs"
+          ),
         },
         {
           find: "swiper",
