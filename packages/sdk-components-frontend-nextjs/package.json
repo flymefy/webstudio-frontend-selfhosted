@@ -10,7 +10,8 @@
   "sideEffects": false,
   "files": [
     "lib/*",
-    "!*.{test,stories}.*"
+    "!*.{test,stories}.*",
+    "private-src/__shim__/**"
   ],
   "exports": {
     ".": {

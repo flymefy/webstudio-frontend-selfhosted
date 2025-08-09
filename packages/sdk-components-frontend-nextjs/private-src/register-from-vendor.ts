@@ -56,27 +56,14 @@ function detectComponents(): string[] {
       f.includes(`${path.sep}components${path.sep}dashboard${path.sep}`) ===
       false
   );
-  // Filter out modules importing css/scss and ensure default export exists
+  // Filter out modules importing css/scss and ensure default export exists (allow next/react-router-dom; they'll be transformed)
   const filtered = nonDashboard.filter((file) => {
     try {
       const src = readFileSync(file, "utf8");
       const hasStyleImport =
         /import\s+[^;]*['\"]([^'\"]+\.(css|scss))['\"]/m.test(src);
       const hasDefault = /export\s+default\s+/m.test(src);
-      const importsSecurityModal = /securitySettingsModal/i.test(src);
-      const importsPhoneCss =
-        /react-phone-number-input\s*\/\s*style\.css/i.test(src);
-      const importsRRD = /from\s+['\"]react-router-dom['\"]/m.test(src);
-      const importsNext =
-        /from\s+['\"]next\//m.test(src) || /from\s+['\"]next['\"]/m.test(src);
-      return (
-        hasStyleImport === false &&
-        hasDefault === true &&
-        !importsSecurityModal &&
-        !importsPhoneCss &&
-        !importsRRD &&
-        !importsNext
-      );
+      return hasStyleImport === false && hasDefault === true;
     } catch {
       return false;
     }
@@ -88,12 +75,46 @@ function relativeFromPrivateSrc(absPath: string) {
   return path.relative(outDir, absPath).replaceAll("\\", "/");
 }
 
+function transformSourceForAdapters(src: string) {
+  // Replace next/image import to adapter
+  src = src.replace(
+    /from\s+["']next\/image["']/g,
+    "from './adapters/next-image'"
+  );
+  // Replace react-router-dom import to adapter link
+  src = src.replace(
+    /from\s+["']react-router-dom["']/g,
+    "from './adapters/link'"
+  );
+  return src;
+}
+
+function writeTransformedShim(originalPath: string): string {
+  const code = readFileSync(originalPath, "utf8");
+  const transformed = transformSourceForAdapters(code);
+  const relDir = path.dirname(relativeFromPrivateSrc(originalPath));
+  const base = path.basename(originalPath);
+  const outPath = path.join(outDir, "__shim__", relDir, base);
+  mkdirSync(path.dirname(outPath), { recursive: true });
+  writeFileSync(outPath, transformed);
+  return outPath;
+}
+
+function writeEmptyExports() {
+  const componentsDest = path.join(outDir, "components.ts");
+  const metasDest = path.join(outDir, "metas.ts");
+  mkdirSync(path.dirname(componentsDest), { recursive: true });
+  writeFileSync(componentsDest, "// no components exported\n");
+  writeFileSync(metasDest, "// no metas exported\n");
+}
+
 function generateComponentsIndex(componentFiles: string[]) {
   const lines: string[] = [];
   for (const file of componentFiles) {
     const basename = path.basename(file, path.extname(file));
     const compName = pascalCase(basename);
-    const rel = relativeFromPrivateSrc(file);
+    const shim = writeTransformedShim(file);
+    const rel = relativeFromPrivateSrc(shim);
     lines.push(`export { default as ${compName} } from "./${rel}";`);
   }
   const dest = path.join(outDir, "components.ts");
@@ -132,6 +153,7 @@ function generateMetasIndex(componentNames: string[]) {
   const files = detectComponents();
   if (files.length === 0) {
     console.info("No components found under vendor. Skipping.");
+    writeEmptyExports();
     return;
   }
   const names = generateComponentsIndex(files);
