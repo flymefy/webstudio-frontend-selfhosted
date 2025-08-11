@@ -280,6 +280,13 @@ export default defineConfig(({ mode }) => {
           replacement: path.resolve(__dirname, "node_modules/dayjs"),
         },
         {
+          find: "react-select-country-list",
+          replacement: path.resolve(
+            __dirname,
+            "node_modules/react-select-country-list"
+          ),
+        },
+        {
           find: "react-toastify/dist/ReactToastify.css",
           replacement: path.resolve(
             __dirname,
@@ -366,6 +373,7 @@ export default defineConfig(({ mode }) => {
         "react-photoswipe-gallery",
         "photoswipe",
         "dayjs",
+        "axios",
       ],
     },
   };

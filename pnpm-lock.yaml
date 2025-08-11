@@ -460,6 +460,12 @@ importers:
       react-pro-sidebar:
         specifier: ^1.1.0
         version: 1.1.0(@types/react@18.2.79)(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318)
+      react-select:
+        specifier: ^5.8.0
+        version: 5.10.2(@types/react@18.2.79)(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318)
+      react-select-country-list:
+        specifier: ^2.2.3
+        version: 2.2.3
       react-slick:
         specifier: ^0.30.2
         version: 0.30.3(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318)
@@ -5918,6 +5924,11 @@ packages:
   '@types/react-dom@18.2.25':
     resolution: {integrity: sha512-o/V48vf4MQh7juIKZU2QGDfli6p1+OOi5oXx36Hffpc9adsHeXjVp8rHuPkjd8VT8sOJ2Zp05HR7CdpGTIUFUA==}
 
+  '@types/react-transition-group@4.4.12':
+    resolution: {integrity: sha512-8TV6R3h2j7a91c+1DXdJi3Syo69zzIZbz7Lg5tORM5LEJG7X/E6a1V3drRyBRZq7/utz7A+c4OgYLiLcYGHG6w==}
+    peerDependencies:
+      '@types/react': ^18.2.70
+
   '@types/react@18.2.79':
     resolution: {integrity: sha512-RwGAGXPl9kSXwdNTafkOEuFrTBD5SA2B3iEB96xi8+xu5ddUa/cpvyVCSNn+asgLCTHkb5ZxN8gbuibYJi4s1w==}
 
@@ -7968,6 +7979,9 @@ packages:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
     engines: {node: '>= 0.6'}
 
+  memoize-one@6.0.0:
+    resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==}
+
   memoize@10.0.0:
     resolution: {integrity: sha512-H6cBLgsi6vMWOcCpvVCdFFnl3kerEXbrYh9q+lY6VXvQSmM6CkmV08VOwT+WE2tzIEqRPFfAq3fm4v/UIW6mSA==}
     engines: {node: '>=18'}
@@ -9174,6 +9188,15 @@ packages:
       react-dom:
         optional: true
 
+  react-select-country-list@2.2.3:
+    resolution: {integrity: sha512-eRgXL613dVyJiE99yKDYLvSBKDxvIlhkmvO2DVIjdKVyUQq6kBqoMUV/2zuRIAsbRXgBGmKjeL1dxjf7zTfszg==}
+
+  react-select@5.10.2:
+    resolution: {integrity: sha512-Z33nHdEFWq9tfnfVXaiM12rbJmk+QjFEztWLtmXqQhz6Al4UZZ9xc0wiatmGtUOCCnHN0WizL3tCMYRENX4rVQ==}
+    peerDependencies:
+      react: 18.3.0-canary-14898b6a9-20240318
+      react-dom: 18.3.0-canary-14898b6a9-20240318
+
   react-shallow-renderer@16.15.0:
     resolution: {integrity: sha512-oScf2FqQ9LFVQgA73vr86xl2NaOIX73rh+YFqcOp68CWj56tSfgtGKrEbyhCj0rSijyG9M1CYprTh39fBi5hzA==}
     peerDependencies:
@@ -10086,6 +10109,15 @@ packages:
     engines: {node: '>= 16.0.0'}
     peerDependencies:
       react: 18.3.0-canary-14898b6a9-20240318
+
+  use-isomorphic-layout-effect@1.2.1:
+    resolution: {integrity: sha512-tpZZ+EX0gaghDAiFR37hj5MgY6ZN55kLiPkJsKxBMZ6GZdOSPJXiOzPM984oPYZ5AnehYx5WQp1+ME8I/P/pRA==}
+    peerDependencies:
+      '@types/react': '*'
+      react: 18.3.0-canary-14898b6a9-20240318
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   use-sidecar@1.1.3:
     resolution: {integrity: sha512-Fedw0aZvkhynoPYlA5WXrMCAMm+nSWdZt6lzJQ7Ok8S6Q+VsHmHpRWndVRJ8Be0ZbkfPc5LRYH+5XrzXcEeLRQ==}
@@ -11169,7 +11201,7 @@ snapshots:
 
   '@emotion/react@11.14.0(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.25.0
+      '@babel/runtime': 7.28.2
       '@emotion/babel-plugin': 11.13.5
       '@emotion/cache': 11.14.0
       '@emotion/serialize': 1.3.3
@@ -11195,7 +11227,7 @@ snapshots:
 
   '@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318))(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.25.0
+      '@babel/runtime': 7.28.2
       '@emotion/babel-plugin': 11.13.5
       '@emotion/is-prop-valid': 1.3.1
       '@emotion/react': 11.14.0(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)
@@ -12435,13 +12467,13 @@ snapshots:
 
   '@radix-ui/number@1.0.1':
     dependencies:
-      '@babel/runtime': 7.22.3
+      '@babel/runtime': 7.28.2
 
   '@radix-ui/number@1.1.1': {}
 
   '@radix-ui/primitive@1.0.1':
     dependencies:
-      '@babel/runtime': 7.22.3
+      '@babel/runtime': 7.28.2
 
   '@radix-ui/primitive@1.1.2': {}
 
@@ -12539,7 +12571,7 @@ snapshots:
 
   '@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.22.3
+      '@babel/runtime': 7.28.2
       react: 18.3.0-canary-14898b6a9-20240318
     optionalDependencies:
       '@types/react': 18.2.79
@@ -12572,7 +12604,7 @@ snapshots:
 
   '@radix-ui/react-context@1.0.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.22.3
+      '@babel/runtime': 7.28.2
       react: 18.3.0-canary-14898b6a9-20240318
     optionalDependencies:
       '@types/react': 18.2.79
@@ -12607,7 +12639,7 @@ snapshots:
 
   '@radix-ui/react-direction@1.0.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.22.3
+      '@babel/runtime': 7.28.2
       react: 18.3.0-canary-14898b6a9-20240318
     optionalDependencies:
       '@types/react': 18.2.79
@@ -12787,7 +12819,7 @@ snapshots:
 
   '@radix-ui/react-presence@1.0.1(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.22.3
+      '@babel/runtime': 7.28.2
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)
       react: 18.3.0-canary-14898b6a9-20240318
@@ -12808,7 +12840,7 @@ snapshots:
 
   '@radix-ui/react-primitive@1.0.3(@types/react-dom@18.2.25)(@types/react@18.2.79)(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.25.0
+      '@babel/runtime': 7.28.2
       '@radix-ui/react-slot': 1.0.2(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)
       react: 18.3.0-canary-14898b6a9-20240318
       react-dom: 18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318)
@@ -13071,7 +13103,7 @@ snapshots:
 
   '@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.22.3
+      '@babel/runtime': 7.28.2
       react: 18.3.0-canary-14898b6a9-20240318
     optionalDependencies:
       '@types/react': 18.2.79
@@ -13113,7 +13145,7 @@ snapshots:
 
   '@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)':
     dependencies:
-      '@babel/runtime': 7.22.3
+      '@babel/runtime': 7.28.2
       react: 18.3.0-canary-14898b6a9-20240318
     optionalDependencies:
       '@types/react': 18.2.79
@@ -14031,6 +14063,10 @@ snapshots:
   '@types/prop-types@15.7.5': {}
 
   '@types/react-dom@18.2.25':
+    dependencies:
+      '@types/react': 18.2.79
+
+  '@types/react-transition-group@4.4.12(@types/react@18.2.79)':
     dependencies:
       '@types/react': 18.2.79
 
@@ -16254,7 +16290,7 @@ snapshots:
       decimal.js: 10.4.3
       domexception: 4.0.0
       escodegen: 2.1.0
-      form-data: 4.0.0
+      form-data: 4.0.4
       html-encoding-sniffer: 3.0.0
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
@@ -16545,6 +16581,8 @@ snapshots:
       '@babel/runtime': 7.28.2
 
   media-typer@0.3.0: {}
+
+  memoize-one@6.0.0: {}
 
   memoize@10.0.0:
     dependencies:
@@ -17418,7 +17456,7 @@ snapshots:
 
   polished@4.3.1:
     dependencies:
-      '@babel/runtime': 7.25.0
+      '@babel/runtime': 7.28.2
 
   pony-cause@2.1.4: {}
 
@@ -17884,7 +17922,7 @@ snapshots:
 
   rc-util@5.44.4(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318):
     dependencies:
-      '@babel/runtime': 7.25.0
+      '@babel/runtime': 7.28.2
       react: 18.3.0-canary-14898b6a9-20240318
       react-dom: 18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318)
       react-is: 18.2.0
@@ -17937,7 +17975,7 @@ snapshots:
 
   react-error-boundary@3.1.4(react@18.3.0-canary-14898b6a9-20240318):
     dependencies:
-      '@babel/runtime': 7.25.0
+      '@babel/runtime': 7.28.2
       react: 18.3.0-canary-14898b6a9-20240318
 
   react-error-boundary@5.0.0(react@18.3.0-canary-14898b6a9-20240318):
@@ -18055,6 +18093,25 @@ snapshots:
     optionalDependencies:
       react-dom: 18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318)
 
+  react-select-country-list@2.2.3: {}
+
+  react-select@5.10.2(@types/react@18.2.79)(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318):
+    dependencies:
+      '@babel/runtime': 7.28.2
+      '@emotion/cache': 11.14.0
+      '@emotion/react': 11.14.0(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)
+      '@floating-ui/dom': 1.6.13
+      '@types/react-transition-group': 4.4.12(@types/react@18.2.79)
+      memoize-one: 6.0.0
+      prop-types: 15.8.1
+      react: 18.3.0-canary-14898b6a9-20240318
+      react-dom: 18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318)
+      react-transition-group: 4.4.5(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318)
+      use-isomorphic-layout-effect: 1.2.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318)
+    transitivePeerDependencies:
+      - '@types/react'
+      - supports-color
+
   react-shallow-renderer@16.15.0(react@18.3.0-canary-14898b6a9-20240318):
     dependencies:
       object-assign: 4.1.1
@@ -18100,7 +18157,7 @@ snapshots:
 
   react-transition-group@4.4.5(react-dom@18.3.0-canary-14898b6a9-20240318(react@18.3.0-canary-14898b6a9-20240318))(react@18.3.0-canary-14898b6a9-20240318):
     dependencies:
-      '@babel/runtime': 7.25.0
+      '@babel/runtime': 7.28.2
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
@@ -18984,6 +19041,12 @@ snapshots:
   use-debounce@10.0.4(react@18.3.0-canary-14898b6a9-20240318):
     dependencies:
       react: 18.3.0-canary-14898b6a9-20240318
+
+  use-isomorphic-layout-effect@1.2.1(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318):
+    dependencies:
+      react: 18.3.0-canary-14898b6a9-20240318
+    optionalDependencies:
+      '@types/react': 18.2.79
 
   use-sidecar@1.1.3(@types/react@18.2.79)(react@18.3.0-canary-14898b6a9-20240318):
     dependencies:
