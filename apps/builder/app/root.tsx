@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "photoswipe/dist/photoswipe.css";
 import "antd/dist/reset.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const loader = () => {
   return json({

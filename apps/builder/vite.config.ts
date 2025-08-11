@@ -287,11 +287,31 @@ export default defineConfig(({ mode }) => {
           ),
         },
         {
+          find: "react-select",
+          replacement: path.resolve(__dirname, "node_modules/react-select"),
+        },
+        {
           find: "react-toastify/dist/ReactToastify.css",
           replacement: path.resolve(
             __dirname,
             "node_modules/react-toastify/dist/ReactToastify.css"
           ),
+        },
+        {
+          find: "react-bootstrap",
+          replacement: path.resolve(__dirname, "node_modules/react-bootstrap"),
+        },
+        {
+          find: "react-flagkit",
+          replacement: path.resolve(__dirname, "node_modules/react-flagkit"),
+        },
+        {
+          find: "axios",
+          replacement: path.resolve(__dirname, "node_modules/axios"),
+        },
+        {
+          find: "react-redux",
+          replacement: path.resolve(__dirname, "node_modules/react-redux"),
         },
         {
           find: "antd/dist/reset.css",
@@ -374,6 +394,10 @@ export default defineConfig(({ mode }) => {
         "photoswipe",
         "dayjs",
         "axios",
+        "react-select",
+        "react-bootstrap",
+        "react-flagkit",
+        "react-redux",
       ],
     },
   };
