@@ -1,6 +1,6 @@
 import Image from '../../../../../../../adapters/next-image';
 import { useState } from 'react';
-import { getAirlineByIata, getAirlineLogo } from '../../../../lib/aviation';
+import { getAirlineByIata, getAirlineLogo } from '../../lib/aviation';
 
 const AirlineLogo = ({ code, name, className = 'w-6 h-6' }) => {
   const [error, setError] = useState(false);
