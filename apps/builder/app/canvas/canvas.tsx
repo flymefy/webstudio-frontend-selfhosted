@@ -256,10 +256,18 @@ export const Canvas = () => {
       (async () => {
         const [feComponents, feMetas, feHooksModule, feTemplates] =
           await Promise.all([
-            import("@webstudio-is/sdk-components-frontend-nextjs"),
-            import("@webstudio-is/sdk-components-frontend-nextjs/metas"),
-            import("@webstudio-is/sdk-components-frontend-nextjs/hooks"),
-            import("@webstudio-is/sdk-components-frontend-nextjs/templates"),
+            import(
+              /* @vite-ignore */ "@webstudio-is/sdk-components-frontend-nextjs"
+            ),
+            import(
+              /* @vite-ignore */ "@webstudio-is/sdk-components-frontend-nextjs/metas"
+            ),
+            import(
+              /* @vite-ignore */ "@webstudio-is/sdk-components-frontend-nextjs/hooks"
+            ),
+            import(
+              /* @vite-ignore */ "@webstudio-is/sdk-components-frontend-nextjs/templates"
+            ),
           ]);
         registerComponentLibrary({
           namespace: "@webstudio-is/sdk-components-frontend-nextjs",
