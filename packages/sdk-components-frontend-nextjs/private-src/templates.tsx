@@ -6,7 +6,6 @@ export const page_page_jsx_template = {
   category: "pages",
   order: 1,
   description: "page.jsx",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="page.jsx">
       <$.PagePageJsx />
@@ -17,7 +16,6 @@ export const page_activities_template = {
   category: "pages",
   order: 1,
   description: "activities",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="activities">
       <$.PageActivities />
@@ -28,7 +26,6 @@ export const page_cars_template = {
   category: "pages",
   order: 1,
   description: "cars",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="cars">
       <$.PageCars />
@@ -39,7 +36,6 @@ export const page_cruises_template = {
   category: "pages",
   order: 1,
   description: "cruises",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="cruises">
       <$.PageCruises />
@@ -50,7 +46,6 @@ export const page_flights_template = {
   category: "pages",
   order: 1,
   description: "flights",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="flights">
       <$.PageFlights />
@@ -61,7 +56,6 @@ export const page_hotels_template = {
   category: "pages",
   order: 1,
   description: "hotels",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="hotels">
       <$.PageHotels />
@@ -72,7 +66,6 @@ export const page_tours_template = {
   category: "pages",
   order: 1,
   description: "tours",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="tours">
       <$.PageTours />
@@ -83,7 +76,6 @@ export const pageactivityactivity_list_v1_template = {
   category: "pages",
   order: 1,
   description: "(activity) / activity-list-v1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(activity) / activity-list-v1">
       <$.PageactivityactivityListV1 />
@@ -94,7 +86,6 @@ export const pageblogsblog_list_v1_template = {
   category: "pages",
   order: 1,
   description: "(blogs) / blog-list-v1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(blogs) / blog-list-v1">
       <$.PageblogsblogListV1 />
@@ -105,7 +96,6 @@ export const pagecruisecruise_list_v1_template = {
   category: "pages",
   order: 1,
   description: "(cruise) / cruise-list-v1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(cruise) / cruise-list-v1">
       <$.PagecruisecruiseListV1 />
@@ -116,7 +106,6 @@ export const pageflightflight_list_v1_template = {
   category: "pages",
   order: 1,
   description: "(flight) / flight-list-v1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(flight) / flight-list-v1">
       <$.PageflightflightListV1 />
@@ -127,7 +116,6 @@ export const pagehomeshome1_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_1">
       <$.Pagehomeshome1 />
@@ -138,7 +126,6 @@ export const pagehomeshome10_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_10",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_10">
       <$.Pagehomeshome10 />
@@ -149,7 +136,6 @@ export const pagehomeshome2_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_2",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_2">
       <$.Pagehomeshome2 />
@@ -160,7 +146,6 @@ export const pagehomeshome3_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_3",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_3">
       <$.Pagehomeshome3 />
@@ -171,7 +156,6 @@ export const pagehomeshome4_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_4",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_4">
       <$.Pagehomeshome4 />
@@ -182,7 +166,6 @@ export const pagehomeshome5_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_5",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_5">
       <$.Pagehomeshome5 />
@@ -193,7 +176,6 @@ export const pagehomeshome6_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_6",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_6">
       <$.Pagehomeshome6 />
@@ -204,7 +186,6 @@ export const pagehomeshome7_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_7",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_7">
       <$.Pagehomeshome7 />
@@ -215,7 +196,6 @@ export const pagehomeshome8_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_8",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_8">
       <$.Pagehomeshome8 />
@@ -226,7 +206,6 @@ export const pagehomeshome9_template = {
   category: "pages",
   order: 1,
   description: "(homes) / home_9",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(homes) / home_9">
       <$.Pagehomeshome9 />
@@ -237,7 +216,6 @@ export const pagehotelbooking_page_template = {
   category: "pages",
   order: 1,
   description: "(hotel) / booking-page",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(hotel) / booking-page">
       <$.PagehotelbookingPage />
@@ -248,7 +226,6 @@ export const pagehotelhotel_list_v1_template = {
   category: "pages",
   order: 1,
   description: "(hotel) / hotel-list-v1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(hotel) / hotel-list-v1">
       <$.PagehotelhotelListV1 />
@@ -259,7 +236,6 @@ export const pageothersabout_template = {
   category: "pages",
   order: 1,
   description: "(others) / about",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(others) / about">
       <$.Pageothersabout />
@@ -270,7 +246,6 @@ export const pageotherscontact_template = {
   category: "pages",
   order: 1,
   description: "(others) / contact",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(others) / contact">
       <$.Pageotherscontact />
@@ -281,7 +256,6 @@ export const pageothersdestinations_template = {
   category: "pages",
   order: 1,
   description: "(others) / destinations",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(others) / destinations">
       <$.Pageothersdestinations />
@@ -292,7 +266,6 @@ export const pageothershelp_center_template = {
   category: "pages",
   order: 1,
   description: "(others) / help-center",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(others) / help-center">
       <$.PageothershelpCenter />
@@ -303,7 +276,6 @@ export const pageotherslogin_template = {
   category: "pages",
   order: 1,
   description: "(others) / login",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(others) / login">
       <$.Pageotherslogin />
@@ -314,7 +286,6 @@ export const pageotherssignup_template = {
   category: "pages",
   order: 1,
   description: "(others) / signup",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(others) / signup">
       <$.Pageotherssignup />
@@ -325,7 +296,6 @@ export const pageothersterms_template = {
   category: "pages",
   order: 1,
   description: "(others) / terms",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(others) / terms">
       <$.Pageothersterms />
@@ -336,7 +306,6 @@ export const pagerentalrental_list_v1_template = {
   category: "pages",
   order: 1,
   description: "(rental) / rental-list-v1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(rental) / rental-list-v1">
       <$.PagerentalrentalListV1 />
@@ -347,7 +316,6 @@ export const pagetourtour_list_v1_template = {
   category: "pages",
   order: 1,
   description: "(tour) / tour-list-v1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(tour) / tour-list-v1">
       <$.PagetourtourListV1 />
@@ -358,7 +326,6 @@ export const page_car_car_booking_template = {
   category: "pages",
   order: 1,
   description: "car / car-booking",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="car / car-booking">
       <$.PageCarCarBooking />
@@ -369,7 +336,6 @@ export const page_car_car_list_v1_template = {
   category: "pages",
   order: 1,
   description: "car / car-list-v1",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="car / car-list-v1">
       <$.PageCarCarListV1 />
@@ -380,7 +346,6 @@ export const page_car_car_single_template = {
   category: "pages",
   order: 1,
   description: "car / car-single",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="car / car-single">
       <$.PageCarCarSingle />
@@ -391,7 +356,6 @@ export const pageactivityactivity_singleid_template = {
   category: "pages",
   order: 1,
   description: "(activity) / activity-single / (id)",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(activity) / activity-single / (id)">
       <$.PageactivityactivitySingleid />
@@ -402,7 +366,6 @@ export const pageblogsblog_detailsid_template = {
   category: "pages",
   order: 1,
   description: "(blogs) / blog-details / (id)",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(blogs) / blog-details / (id)">
       <$.PageblogsblogDetailsid />
@@ -413,7 +376,6 @@ export const pagecruisecruise_singleid_template = {
   category: "pages",
   order: 1,
   description: "(cruise) / cruise-single / (id)",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(cruise) / cruise-single / (id)">
       <$.PagecruisecruiseSingleid />
@@ -424,7 +386,6 @@ export const pagehotelhotel_single_v1id_template = {
   category: "pages",
   order: 1,
   description: "(hotel) / hotel-single-v1 / (id)",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(hotel) / hotel-single-v1 / (id)">
       <$.PagehotelhotelSingleV1id />
@@ -435,7 +396,6 @@ export const pagerentalrental_singleid_template = {
   category: "pages",
   order: 1,
   description: "(rental) / rental-single / (id)",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(rental) / rental-single / (id)">
       <$.PagerentalrentalSingleid />
@@ -446,7 +406,6 @@ export const pagetourtour_singleid_template = {
   category: "pages",
   order: 1,
   description: "(tour) / tour-single / (id)",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="(tour) / tour-single / (id)">
       <$.PagetourtourSingleid />
@@ -457,7 +416,6 @@ export const page_booking_flightid_template = {
   category: "pages",
   order: 1,
   description: "booking / flight / (id)",
-  icon: '',
   template: (
     <ws.element ws:tag="div" ws:label="booking / flight / (id)">
       <$.PageBookingFlightid />
@@ -548,7 +506,7 @@ export const page_booking_flightid_templateMeta: TemplateMeta =
 export const section_about_section_template = {
   category: "general",
   description: "About Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="About Section">
       <ws.descendant ws:label="About Section" selector=" .about-section" />
@@ -558,7 +516,7 @@ export const section_about_section_template = {
 export const section_about_section_four_template = {
   category: "general",
   description: "About Section Four",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="About Section Four">
       <ws.descendant
@@ -571,7 +529,7 @@ export const section_about_section_four_template = {
 export const section_benefit_section_template = {
   category: "general",
   description: "Benefit Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Benefit Section">
       <ws.descendant ws:label="Benefit Section" selector=" .benefit-section" />
@@ -581,7 +539,7 @@ export const section_benefit_section_template = {
 export const section_benifit_section_template = {
   category: "general",
   description: "Benifit Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Benifit Section">
       <ws.descendant ws:label="Benifit Section" selector=" .benifit-section" />
@@ -591,7 +549,7 @@ export const section_benifit_section_template = {
 export const section_blog_section_four_template = {
   category: "general",
   description: "Blog Section Four",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Blog Section Four">
       <ws.descendant
@@ -604,7 +562,7 @@ export const section_blog_section_four_template = {
 export const section_choose_us_section_template = {
   category: "general",
   description: "Choose Us Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Choose Us Section">
       <ws.descendant
@@ -617,7 +575,7 @@ export const section_choose_us_section_template = {
 export const section_client_section_four_template = {
   category: "general",
   description: "Client Section Four",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Client Section Four">
       <ws.descendant
@@ -630,7 +588,7 @@ export const section_client_section_four_template = {
 export const section_faq_section_template = {
   category: "general",
   description: "Faq Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Faq Section">
       <ws.descendant ws:label="Faq Section" selector=" .faq-section" />
@@ -640,7 +598,7 @@ export const section_faq_section_template = {
 export const section_faq_section_three_template = {
   category: "general",
   description: "Faq Section Three",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Faq Section Three">
       <ws.descendant
@@ -653,7 +611,7 @@ export const section_faq_section_three_template = {
 export const section_feeback_section_template = {
   category: "general",
   description: "Feeback Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Feeback Section">
       <ws.descendant ws:label="Feeback Section" selector=" .feeback-section" />
@@ -663,7 +621,7 @@ export const section_feeback_section_template = {
 export const section_filter_section_template = {
   category: "general",
   description: "Filter Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Filter Section">
       <ws.descendant ws:label="Filter Section" selector=" .filter-section" />
@@ -673,7 +631,7 @@ export const section_filter_section_template = {
 export const section_hero_section_template = {
   category: "general",
   description: "Hero Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Hero Section">
       <ws.descendant ws:label="Hero Section" selector=" .hero-section" />
@@ -683,7 +641,7 @@ export const section_hero_section_template = {
 export const section_hero_section_five_template = {
   category: "general",
   description: "Hero Section Five",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Hero Section Five">
       <ws.descendant
@@ -696,7 +654,7 @@ export const section_hero_section_five_template = {
 export const section_hero_section_four_template = {
   category: "general",
   description: "Hero Section Four",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Hero Section Four">
       <ws.descendant
@@ -709,7 +667,7 @@ export const section_hero_section_four_template = {
 export const section_hero_section_three_template = {
   category: "general",
   description: "Hero Section Three",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Hero Section Three">
       <ws.descendant
@@ -722,7 +680,7 @@ export const section_hero_section_three_template = {
 export const section_offers_section_template = {
   category: "general",
   description: "Offers Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Offers Section">
       <ws.descendant ws:label="Offers Section" selector=" .offers-section" />
@@ -732,7 +690,7 @@ export const section_offers_section_template = {
 export const section_place_section_template = {
   category: "general",
   description: "Place Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Place Section">
       <ws.descendant ws:label="Place Section" selector=" .place-section" />
@@ -742,7 +700,7 @@ export const section_place_section_template = {
 export const section_price_section_template = {
   category: "general",
   description: "Price Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Price Section">
       <ws.descendant ws:label="Price Section" selector=" .price-section" />
@@ -752,7 +710,7 @@ export const section_price_section_template = {
 export const section_section_template = {
   category: "general",
   description: "Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Section">
       <ws.descendant ws:label="Section" selector=" .section" />
@@ -762,7 +720,7 @@ export const section_section_template = {
 export const section_section_bg_template = {
   category: "general",
   description: "Section Bg",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Section Bg">
       <ws.descendant ws:label="Section Bg" selector=" .section-bg" />
@@ -772,7 +730,7 @@ export const section_section_bg_template = {
 export const section_section_header_template = {
   category: "general",
   description: "Section Header",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Section Header">
       <ws.descendant ws:label="Section Header" selector=" .section-header" />
@@ -782,7 +740,7 @@ export const section_section_header_template = {
 export const section_section_header_six_template = {
   category: "general",
   description: "Section Header Six",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Section Header Six">
       <ws.descendant
@@ -795,7 +753,7 @@ export const section_section_header_six_template = {
 export const section_section_right_img_template = {
   category: "general",
   description: "Section Right Img",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Section Right Img">
       <ws.descendant
@@ -808,7 +766,7 @@ export const section_section_right_img_template = {
 export const section_section_right_img_two_template = {
   category: "general",
   description: "Section Right Img Two",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Section Right Img Two">
       <ws.descendant
@@ -821,7 +779,7 @@ export const section_section_right_img_two_template = {
 export const section_section_slider_nav_template = {
   category: "general",
   description: "Section Slider Nav",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Section Slider Nav">
       <ws.descendant
@@ -834,7 +792,7 @@ export const section_section_slider_nav_template = {
 export const section_sectionTitle_template = {
   category: "general",
   description: "SectionTitle",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="SectionTitle">
       <ws.descendant ws:label="SectionTitle" selector=" .sectionTitle" />
@@ -844,7 +802,7 @@ export const section_sectionTitle_template = {
 export const section_support_company_section_template = {
   category: "general",
   description: "Support Company Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Support Company Section">
       <ws.descendant
@@ -857,7 +815,7 @@ export const section_support_company_section_template = {
 export const section_support_section_template = {
   category: "general",
   description: "Support Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Support Section">
       <ws.descendant ws:label="Support Section" selector=" .support-section" />
@@ -867,7 +825,7 @@ export const section_support_section_template = {
 export const section_support_section_five_template = {
   category: "general",
   description: "Support Section Five",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Support Section Five">
       <ws.descendant
@@ -880,7 +838,7 @@ export const section_support_section_five_template = {
 export const section_team_section_template = {
   category: "general",
   description: "Team Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Team Section">
       <ws.descendant ws:label="Team Section" selector=" .team-section" />
@@ -890,7 +848,7 @@ export const section_team_section_template = {
 export const section_testimonial_section_template = {
   category: "general",
   description: "Testimonial Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Testimonial Section">
       <ws.descendant
@@ -903,7 +861,7 @@ export const section_testimonial_section_template = {
 export const section_testimonial_section_three_template = {
   category: "general",
   description: "Testimonial Section Three",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Testimonial Section Three">
       <ws.descendant
@@ -916,7 +874,7 @@ export const section_testimonial_section_three_template = {
 export const section_update_section_template = {
   category: "general",
   description: "Update Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Update Section">
       <ws.descendant ws:label="Update Section" selector=" .update-section" />
@@ -926,7 +884,7 @@ export const section_update_section_template = {
 export const section_user_section_template = {
   category: "general",
   description: "User Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="User Section">
       <ws.descendant ws:label="User Section" selector=" .user-section" />
@@ -936,7 +894,7 @@ export const section_user_section_template = {
 export const section_work_section_template = {
   category: "general",
   description: "Work Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Work Section">
       <ws.descendant ws:label="Work Section" selector=" .work-section" />
@@ -946,7 +904,7 @@ export const section_work_section_template = {
 export const section_work_section_six_template = {
   category: "general",
   description: "Work Section Six",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Work Section Six">
       <ws.descendant
@@ -959,7 +917,7 @@ export const section_work_section_six_template = {
 export const section_xb_cursor_section_template = {
   category: "general",
   description: "Xb Cursor Section",
-  icon: '",
+  icon: imagePlaceholderDataUrl,
   template: (
     <ws.element ws:tag="div" ws:label="Xb Cursor Section">
       <ws.descendant

@@ -1,0 +1,27 @@
+import type { PropMeta } from "@webstudio-is/sdk";
+
+export const propsuistub: Record<string, PropMeta> = {};
+export const propsDatePicker: Record<string, PropMeta> = {};
+export const propsTabs: Record<string, PropMeta> = {};
+export const propsTab: Record<string, PropMeta> = {};
+export const propsTabList: Record<string, PropMeta> = {};
+export const propsTabPanel: Record<string, PropMeta> = {};
+export const propsToastContainer: Record<string, PropMeta> = {};
+export const propsSlider: Record<string, PropMeta> = {};
+export const propsRange: Record<string, PropMeta> = {};
+export const propsSwiper: Record<string, PropMeta> = {};
+export const propsSwiperSlide: Record<string, PropMeta> = {};
+export const propsParallax: Record<string, PropMeta> = {};
+export const propsModalVideo: Record<string, PropMeta> = {};
+export const propsGoogleMapReact: Record<string, PropMeta> = {};
+export const propsMap: Record<string, PropMeta> = {};
+export const propsProvider: Record<string, PropMeta> = {};
+export const propsContainer: Record<string, PropMeta> = {};
+export const propsButton: Record<string, PropMeta> = {};
+export const propsInput: Record<string, PropMeta> = {};
+export const propsSelect: Record<string, PropMeta> = {};
+export const propsCheckbox: Record<string, PropMeta> = {};
+export const propsRadio: Record<string, PropMeta> = {};
+export const propsTabsList: Record<string, PropMeta> = {};
+export const propsTabsTrigger: Record<string, PropMeta> = {};
+export const propsTabsContent: Record<string, PropMeta> = {};
