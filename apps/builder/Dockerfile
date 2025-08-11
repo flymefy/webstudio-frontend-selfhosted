@@ -16,9 +16,12 @@ COPY packages ./packages
 # Use workspace pnpm
 RUN corepack prepare pnpm@9.14.4 --activate && pnpm -w install --no-frozen-lockfile
 
-# Build all packages first, then the builder
-RUN pnpm -w --filter='packages/*' build
-RUN pnpm -w --filter='@webstudio-is/builder' build
+# Ensure local binaries are on PATH for scripts like `which remix`
+ENV PATH=/app/node_modules/.bin:$PATH
+
+# Build all packages first, then the builder (explicit recursive run)
+RUN pnpm -w -r --filter "./packages/*" run build
+RUN pnpm -w --filter "@webstudio-is/builder" run build
 
 ENV NODE_ENV=production
 EXPOSE 3000
