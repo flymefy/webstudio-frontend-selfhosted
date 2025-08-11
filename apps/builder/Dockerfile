@@ -2,7 +2,7 @@
 FROM node:20-slim
 
 # Install netcat for wait-for-db and enable corepack
-RUN apt-get update && apt-get install -y --no-install-recommends netcat-openbsd ca-certificates && rm -rf /var/lib/apt/lists/* && corepack enable
+RUN apt-get update && apt-get install -y --no-install-recommends netcat-openbsd ca-certificates git which && rm -rf /var/lib/apt/lists/* && corepack enable
 
 WORKDIR /app
 
