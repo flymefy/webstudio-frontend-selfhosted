@@ -1,0 +1,66 @@
+name: Deploy to Server (SSH)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: SSH and deploy
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            set -euo pipefail
+            export DEBIAN_FRONTEND=noninteractive
+            # install docker & compose plugin if missing
+            if ! command -v docker >/dev/null 2>&1; then
+              apt-get update -y
+              apt-get install -y ca-certificates curl gnupg
+              install -m 0755 -d /etc/apt/keyrings
+              curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+              chmod a+r /etc/apt/keyrings/docker.gpg
+              echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(. /etc/os-release && echo "$VERSION_CODENAME") stable" > /etc/apt/sources.list.d/docker.list
+              apt-get update -y
+              apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin git
+              systemctl enable docker || true
+              systemctl start docker || true
+            fi
+
+            # deploy dir
+            mkdir -p /opt/webstudio
+            cd /opt/webstudio
+
+            # clone or update repo
+            if [ -d webstudio-frontend-selfhosted/.git ]; then
+              cd webstudio-frontend-selfhosted
+              git reset --hard
+              git clean -fdx
+              git pull --rebase origin main
+            else
+              git clone https://github.com/${{ github.repository }}.git webstudio-frontend-selfhosted
+              cd webstudio-frontend-selfhosted
+            fi
+
+            # build and run with docker compose
+            docker compose pull || true
+            docker compose build --no-cache
+            docker compose up -d
+
+            # wait for app
+            for i in $(seq 1 60); do
+              if curl -fsS http://localhost:3000 >/dev/null 2>&1; then
+                echo "App is up"
+                break
+              fi
+              sleep 2
+            done
+
+            docker compose ps
