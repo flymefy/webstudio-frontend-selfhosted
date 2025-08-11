@@ -3,7 +3,7 @@ import DateSearch from "../DateSearch";
 import GuestSearch from "./GuestSearch";
 import PickUpLocation from "./PickUpLocation";
 import DropOffLocation from "./DropOffLocation";
-import { useRouter } from "next/navigation";
+import { useRouter } from '../../../../../../adapters/next-navigation';
 
 const MainFilterSearchBox = () => {
   const Router = useRouter()

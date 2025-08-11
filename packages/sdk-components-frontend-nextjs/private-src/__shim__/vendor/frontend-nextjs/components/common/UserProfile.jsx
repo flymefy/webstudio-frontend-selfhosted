@@ -1,9 +1,9 @@
 'use client'
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import Link from '../../../../../adapters/link';
 import { useAuth } from "../../contexts/AuthContext";
-import { useRouter } from "next/navigation";
+import { useRouter } from '../../../../../adapters/next-navigation';
 
 const UserProfile = ({ user }) => {
   const { logout } = useAuth();

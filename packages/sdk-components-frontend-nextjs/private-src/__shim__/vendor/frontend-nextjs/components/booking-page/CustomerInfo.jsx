@@ -1,6 +1,6 @@
 'use client';
 
-import Link from "next/link";
+import Link from '../../../../../adapters/link';
 import { useState, useEffect } from "react";
 import BookingDetails from "./sidebar/BookingDetails";
 import { useAuth } from "../../contexts/AuthContext";

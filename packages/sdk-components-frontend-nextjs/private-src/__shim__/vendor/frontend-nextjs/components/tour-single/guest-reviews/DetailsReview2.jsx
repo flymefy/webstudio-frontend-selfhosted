@@ -1,4 +1,4 @@
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 import ReviewGallery from "./ReviewGallery";
 
 const DetailsReview2 = () => {

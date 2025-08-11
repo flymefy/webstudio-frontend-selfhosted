@@ -1,4 +1,4 @@
-import Image from './adapters/next-image';
+import Image from '../../../../../adapters/next-image';
 
 const AvailableRooms2 = ({ hotel }) => {
   const demoContent = [

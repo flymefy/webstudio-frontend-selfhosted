@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from '../../../../../adapters/next-head';
 
 const Seo = ({ pageTitle }) => (
   <>

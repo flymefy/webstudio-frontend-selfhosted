@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 import footerDataContent from "../../../data/footerContent";
 
 const FooterContent = () => {

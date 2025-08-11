@@ -5,7 +5,7 @@
 import React, { useState } from 'react'
 import FilterHotelsTabs2 from './filter-tabs/FilterHotelsTabs2'
 import FilterHotels2 from './FilterHotels2'
-import Link from 'next/link';
+import Link from '../../../../../adapters/link';
 
 export default function FilterHotels4() {
     const [filterOption, setFilterOption] = useState("new_york");

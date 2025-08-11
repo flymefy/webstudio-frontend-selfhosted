@@ -2,7 +2,7 @@
 
 import { useSelector, useDispatch } from "react-redux";
 import { addCurrentTab } from "../../features/hero/findPlaceSlice";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from '../../../../../adapters/next-navigation';
 import { useEffect, useState } from "react";
 
 const UnifiedSearchBox = () => {

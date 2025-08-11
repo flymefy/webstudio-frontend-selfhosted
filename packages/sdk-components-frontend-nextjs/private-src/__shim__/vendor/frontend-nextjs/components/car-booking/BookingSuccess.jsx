@@ -1,6 +1,6 @@
 "use client";
 
-import Image from './adapters/next-image';
+import Image from '../../../../../adapters/next-image';
 
 const BookingSuccess = ({ bookingData }) => {
   return (

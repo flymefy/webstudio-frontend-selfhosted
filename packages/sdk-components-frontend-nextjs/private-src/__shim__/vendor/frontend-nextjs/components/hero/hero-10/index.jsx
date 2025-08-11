@@ -1,6 +1,6 @@
 "use client";
 
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 import CompleteSearchEngine from "../../common/CompleteSearchEngine";
 
 const index = ({ 

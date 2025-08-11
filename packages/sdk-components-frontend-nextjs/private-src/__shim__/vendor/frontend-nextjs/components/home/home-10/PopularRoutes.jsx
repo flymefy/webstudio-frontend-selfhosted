@@ -1,11 +1,11 @@
 
 'use client'
 
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 
 const PopularRoutes = () => {
   const rentalRoutes = [

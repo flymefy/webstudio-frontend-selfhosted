@@ -1,4 +1,4 @@
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 
 const WhyChoose = () => {
   const blockContent = [

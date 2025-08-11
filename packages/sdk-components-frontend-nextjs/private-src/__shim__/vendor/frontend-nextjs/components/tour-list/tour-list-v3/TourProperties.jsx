@@ -1,11 +1,11 @@
 
 'use client'
 
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import toursData from "../../../data/tours";
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 
 const TourProperties = () => {
   return (

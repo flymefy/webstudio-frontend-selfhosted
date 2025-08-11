@@ -1,7 +1,7 @@
 
 'use client'
 
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 import Slider from "react-slick";
 import { tourCategories1 } from "../../../data/tourCategories";
 

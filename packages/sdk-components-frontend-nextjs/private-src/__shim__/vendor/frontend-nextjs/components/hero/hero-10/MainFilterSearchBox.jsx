@@ -4,7 +4,7 @@ import DateSearch from "../DateSearch";
 import GuestSearch from "./GuestSearch";
 import FlyingFromLocation from "./FlyingFromLocation";
 import FlyingToLocation from "./FlyingToLocation";
-import { useRouter } from "next/navigation";
+import { useRouter } from '../../../../../../adapters/next-navigation';
 
 const MainFilterSearchBox = () => {
   const Router = useRouter

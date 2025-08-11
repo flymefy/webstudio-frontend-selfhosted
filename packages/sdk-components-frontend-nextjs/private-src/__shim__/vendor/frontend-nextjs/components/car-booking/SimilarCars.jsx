@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from 'react';
-import Image from './adapters/next-image';
-import { useRouter } from 'next/navigation';
-import { useSelectedCar } from '@/contexts/SelectedCarContext';
+import Image from '../../../../../adapters/next-image';
+import { useRouter } from '../../../../../adapters/next-navigation';
+import { useSelectedCar } from '../../contexts/SelectedCarContext';
 
 const SimilarCars = ({ cars, bookingData }) => {
   const router = useRouter();

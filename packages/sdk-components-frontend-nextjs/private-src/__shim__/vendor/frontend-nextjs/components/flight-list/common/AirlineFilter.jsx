@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 
 const AirlineFilter = ({ airlines, selectedAirlines, onAirlineChange }) => {
   return (

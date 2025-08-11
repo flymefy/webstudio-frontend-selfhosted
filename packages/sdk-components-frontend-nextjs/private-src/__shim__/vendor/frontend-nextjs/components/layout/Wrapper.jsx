@@ -1,5 +1,5 @@
-import Header3 from "@/components/header/header-3";
-import Footer3 from "@/components/footer/footer-3";
+import Header3 from '../../components/header/header-3';
+import Footer3 from '../../components/footer/footer-3';
 
 const Wrapper = ({ children }) => {
   return (

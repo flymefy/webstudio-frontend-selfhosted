@@ -39,10 +39,7 @@ function detectComponents(): string[] {
   }
   const patterns = vendorComponentsDirs
     .filter((dir) => existsSync(dir))
-    .flatMap((dir) => [
-      `${dir}/**/*.tsx`,
-      `${dir}/**/*.jsx`,
-    ]);
+    .flatMap((dir) => [`${dir}/**/*.tsx`, `${dir}/**/*.jsx`]);
   if (patterns.length === 0) return [];
   const files = fg.sync(patterns, {
     dot: false,
@@ -64,7 +61,7 @@ function detectComponents(): string[] {
     try {
       const src = readFileSync(file, "utf8");
       const hasStyleImport =
-        /import\s+[^;]*['\"]([^'\"]+\.(css|scss))['\"]/m.test(src);
+        /import\s+[^;]*['\"]([^'\"]+\.(css|scss))['\"];?/m.test(src);
       const hasDefault = /export\s+default\s+/m.test(src);
       return hasStyleImport === false && hasDefault === true;
     } catch {
@@ -78,36 +75,89 @@ function relativeFromPrivateSrc(absPath: string) {
   return path.relative(outDir, absPath).replaceAll("\\", "/");
 }
 
-function transformSourceForAdapters(src: string) {
-  // Strip css/scss imports completely
+function transformSourceForAdapters(
+  src: string,
+  aliasPrefix: string,
+  adapterPrefix: string
+) {
+  // Strip css/scss imports completely (styles are provided globally)
   src = src.replace(
-    /^\s*import\s+[^;]*['"]([^'\"]+\.(css|scss))['"];?\s*$/gim,
+    /^\s*import\s+[^;]*['\"]([^'\"]+\.(css|scss))['\"];?\s*$/gim,
     ""
   );
-  // Replace next/image import to adapter
+  // Replace next/* imports to adapters
   src = src.replace(
     /from\s+["']next\/image["']/g,
-    "from './adapters/next-image'"
+    `from '${adapterPrefix}next-image'`
   );
-  // Replace next/dynamic import to adapter
   src = src.replace(
     /from\s+["']next\/dynamic["']/g,
-    "from './adapters/next-dynamic'"
+    `from '${adapterPrefix}next-dynamic'`
   );
-  // Replace react-router-dom import to adapter link
+  src = src.replace(
+    /from\s+["']next\/link["']/g,
+    `from '${adapterPrefix}link'`
+  );
+  src = src.replace(
+    /from\s+["']next\/head["']/g,
+    `from '${adapterPrefix}next-head'`
+  );
+  src = src.replace(
+    /from\s+["']next\/script["']/g,
+    `from '${adapterPrefix}next-script'`
+  );
+  src = src.replace(
+    /from\s+["']next\/navigation["']/g,
+    `from '${adapterPrefix}next-navigation'`
+  );
+  // Adapt react-router-dom to link adapter
   src = src.replace(
     /from\s+["']react-router-dom["']/g,
-    "from './adapters/link'"
+    `from '${adapterPrefix}link'`
+  );
+  // Resolve @/ alias (vendor root)
+  src = src.replace(
+    /from\s+["']@\/(.+?)["']/g,
+    (_m, p1) => `from '${aliasPrefix}${p1}'`
+  );
+  // Convert CommonJS exports to ESM for data files
+  src = src.replace(/(^|\n)\s*module\.exports\s*=\s*/g, "$1export default ");
+  src = src.replace(
+    /(^|\n)\s*exports\.([A-Za-z0-9_]+)\s*=\s*/g,
+    "$1export const $2 = "
   );
   return src;
 }
 
+function computePrefixes(outDirForFile: string) {
+  const aliasRoot = path.join(outDir, "__shim__", "vendor", "frontend-nextjs");
+  const aliasPrefix = path
+    .relative(outDirForFile, aliasRoot)
+    .replace(/\\/g, "/");
+  const normalizedAliasPrefix = aliasPrefix.length ? aliasPrefix + "/" : "";
+  const adaptersRoot = path.join(outDir, "adapters");
+  const adapterPrefix = path
+    .relative(outDirForFile, adaptersRoot)
+    .replace(/\\/g, "/");
+  const normalizedAdapterPrefix = adapterPrefix.length
+    ? adapterPrefix + "/"
+    : "";
+  return { normalizedAliasPrefix, normalizedAdapterPrefix } as const;
+}
+
 function writeTransformedShim(originalPath: string): string {
   const code = readFileSync(originalPath, "utf8");
-  const transformed = transformSourceForAdapters(code);
-  const relDir = path.dirname(relativeFromPrivateSrc(originalPath));
+  const relFromOutDir = path.dirname(path.relative(outDir, originalPath));
+  const outDirForFile = path.join(outDir, "__shim__", relFromOutDir);
+  const { normalizedAliasPrefix, normalizedAdapterPrefix } =
+    computePrefixes(outDirForFile);
+  const transformed = transformSourceForAdapters(
+    code,
+    normalizedAliasPrefix,
+    normalizedAdapterPrefix
+  );
   const base = path.basename(originalPath);
-  const outPath = path.join(outDir, "__shim__", relDir, base);
+  const outPath = path.join(outDirForFile, base);
   mkdirSync(path.dirname(outPath), { recursive: true });
   writeFileSync(outPath, transformed);
   return outPath;
@@ -121,21 +171,56 @@ function writeEmptyExports() {
   writeFileSync(metasDest, "// no metas exported\n");
 }
 
+function computeComponentName(originalPath: string): string {
+  // Build a unique, readable name from the relative path under vendor/components
+  const relFromVendor = path
+    .relative(vendorRoot, originalPath)
+    .replace(/\\/g, "/");
+  // Remove leading components dir prefix
+  const cleaned = relFromVendor
+    .replace(/^src\/(components)\//, "")
+    .replace(/^(components)\//, "")
+    .replace(/^(app\/components)\//, "");
+  const withoutExt = cleaned.replace(/\.(jsx|tsx)$/, "");
+  const segments = withoutExt.split("/");
+  // If last is index, drop it
+  if (segments[segments.length - 1].toLowerCase() === "index") {
+    segments.pop();
+  }
+  // Build name from up to last 3 segments to keep it concise but unique
+  const take = segments.slice(Math.max(0, segments.length - 3));
+  const base = take.join("_");
+  // Sanitize and PascalCase
+  const sanitized = base
+    .replace(/[^A-Za-z0-9_]/g, "_")
+    .replace(/_+/g, "_")
+    .replace(/^_+|_+$/g, "");
+  const name = pascalCase(sanitized);
+  return name.length ? name : pascalCase(path.basename(withoutExt));
+}
+
 function generateComponentsIndex(componentFiles: string[]) {
   const lines: string[] = [];
+  const names: string[] = [];
+  const used = new Set<string>();
   for (const file of componentFiles) {
-    const basename = path.basename(file, path.extname(file));
-    const compName = pascalCase(basename);
+    const compNameBase = computeComponentName(file);
+    let compName = compNameBase;
+    let i = 2;
+    while (used.has(compName)) {
+      compName = `${compNameBase}${i}`;
+      i += 1;
+    }
+    used.add(compName);
     const shim = writeTransformedShim(file);
     const rel = relativeFromPrivateSrc(shim);
     lines.push(`export { default as ${compName} } from "./${rel}";`);
+    names.push(compName);
   }
   const dest = path.join(outDir, "components.ts");
   mkdirSync(path.dirname(dest), { recursive: true });
   writeFileSync(dest, lines.join("\n") + "\n");
-  return lines
-    .map((l) => l.match(/default as\s+(\w+)/)?.[1])
-    .filter(Boolean) as string[];
+  return names;
 }
 
 function ensureMetaFileFor(name: string) {
@@ -162,6 +247,39 @@ function generateMetasIndex(componentNames: string[]) {
   writeFileSync(dest, lines.join("\n") + "\n");
 }
 
+function mirrorVendorSourcesForComponents() {
+  if (!existsSync(vendorRoot)) return;
+  const files = fg.sync([
+    `${vendorRoot}/**/*.{js,jsx,ts,tsx,json}`,
+    `!${vendorRoot}/node_modules/**`,
+    `!${vendorRoot}/documentation/**`,
+    `!${vendorRoot}/public/**`,
+  ]);
+  for (const srcFile of files) {
+    try {
+      const relFromVendor = path.relative(vendorRoot, srcFile);
+      const destPath = path.join(
+        outDir,
+        "__shim__",
+        "vendor",
+        "frontend-nextjs",
+        relFromVendor
+      );
+      const outDirForFile = path.dirname(destPath);
+      const { normalizedAliasPrefix, normalizedAdapterPrefix } =
+        computePrefixes(outDirForFile);
+      const code = readFileSync(srcFile, "utf8");
+      const transformed = transformSourceForAdapters(
+        code,
+        normalizedAliasPrefix,
+        normalizedAdapterPrefix
+      );
+      mkdirSync(outDirForFile, { recursive: true });
+      writeFileSync(destPath, transformed);
+    } catch {}
+  }
+}
+
 (function main() {
   const files = detectComponents();
   if (files.length === 0) {
@@ -169,6 +287,8 @@ function generateMetasIndex(componentNames: string[]) {
     writeEmptyExports();
     return;
   }
+  // Ensure vendor data and internal modules are available next to shims
+  mirrorVendorSourcesForComponents();
   const names = generateComponentsIndex(files);
   for (const name of names) ensureMetaFileFor(name!);
   generateMetasIndex(names);

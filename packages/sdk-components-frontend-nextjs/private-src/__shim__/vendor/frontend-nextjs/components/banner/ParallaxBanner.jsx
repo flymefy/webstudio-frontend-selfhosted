@@ -1,7 +1,7 @@
 
 'use client'
 
-import Link from "next/link";
+import Link from '../../../../../adapters/link';
 import { Parallax } from "react-parallax";
 
 const ParallaxBanner = () => {

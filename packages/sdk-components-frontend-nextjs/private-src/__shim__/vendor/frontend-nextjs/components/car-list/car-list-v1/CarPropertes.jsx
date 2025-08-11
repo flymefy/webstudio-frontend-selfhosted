@@ -3,10 +3,10 @@
 import carsData from "../../../data/cars";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import Image from './adapters/next-image';
-import { useRouter } from 'next/navigation';
-import { useSelectedCar } from "@/contexts/SelectedCarContext";
-import Link from 'next/link';
+import Image from '../../../../../../adapters/next-image';
+import { useRouter } from '../../../../../../adapters/next-navigation';
+import { useSelectedCar } from '../../../contexts/SelectedCarContext';
+import Link from '../../../../../../adapters/link';
 
 const CarPropertes = () => {
   const router = useRouter();

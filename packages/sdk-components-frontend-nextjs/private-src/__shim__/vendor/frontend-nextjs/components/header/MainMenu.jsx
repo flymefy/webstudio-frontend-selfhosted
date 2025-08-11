@@ -1,7 +1,7 @@
-import Link from "next/link";
+import Link from '../../../../../adapters/link';
 import { servicesItems } from "../../data/mainMenuData";
 import { isActiveLink } from "../../utils/linkActiveChecker";
-import { usePathname } from "next/navigation";
+import { usePathname } from '../../../../../adapters/next-navigation';
 import { 
   MdFlightTakeoff, 
   MdHotel, 

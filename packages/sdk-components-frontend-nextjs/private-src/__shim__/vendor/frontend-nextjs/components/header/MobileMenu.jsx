@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from '../../../../../adapters/link';
 
 import {
   Sidebar,
@@ -20,7 +20,7 @@ import {
 } from "../../utils/linkActiveChecker";
 import Social from "../common/social/Social";
 import ContactInfo from "./ContactInfo";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from '../../../../../adapters/next-navigation';
 import { useEffect, useState } from "react";
 
 const MobileMenu = () => {

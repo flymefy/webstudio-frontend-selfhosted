@@ -1,6 +1,6 @@
 'use client'
 
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 import { useEffect, useState } from "react";
 import MainMenu from "../MainMenu";
 import LanguageCurrencyMegaMenu from "../LanguageCurrencyMegaMenu";

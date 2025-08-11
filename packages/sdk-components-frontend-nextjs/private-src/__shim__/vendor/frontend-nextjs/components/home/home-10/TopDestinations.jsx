@@ -1,7 +1,7 @@
 
 'use client'
 
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { destinations10 } from "../../../data/desinations";

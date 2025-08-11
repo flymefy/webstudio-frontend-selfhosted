@@ -1,8 +1,8 @@
 
 'use client'
 
-import Image from './adapters/next-image';
-import Link from "next/link";
+import Image from '../../../../../adapters/next-image';
+import Link from '../../../../../adapters/link';
 import { useEffect, useState } from "react";
 import blogsData from "../../data/blogs";
 import BlogPagination from "./BlogPagination";

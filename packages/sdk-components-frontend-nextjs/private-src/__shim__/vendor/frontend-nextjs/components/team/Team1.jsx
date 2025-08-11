@@ -1,7 +1,7 @@
 
 'use client'
 
-import Image from './adapters/next-image';
+import Image from '../../../../../adapters/next-image';
 import Slider from "react-slick";
 import teamData from "../../data/teamData";
 

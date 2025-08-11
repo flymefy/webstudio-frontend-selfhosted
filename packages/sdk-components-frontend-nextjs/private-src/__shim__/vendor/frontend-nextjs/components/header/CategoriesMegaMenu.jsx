@@ -1,12 +1,12 @@
-import Image from './adapters/next-image';
-import Link from "next/link";
+import Image from '../../../../../adapters/next-image';
+import Link from '../../../../../adapters/link';
 import { categorieMegaMenuItems } from "../../data/mainMenuData";
 import {
   isActiveParent,
   isActiveLink,
   isActiveParentChaild,
 } from "../../utils/linkActiveChecker";
-import { usePathname } from "next/navigation";
+import { usePathname } from '../../../../../adapters/next-navigation';
 import { useEffect, useState } from "react";
 
 

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from '../../../../../../../adapters/link';
 import blogsData from "../../../../data/blogs";
 
 const Tags = () => {

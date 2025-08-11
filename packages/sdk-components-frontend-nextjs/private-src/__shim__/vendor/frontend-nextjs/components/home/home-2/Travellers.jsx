@@ -4,7 +4,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
 import { destinations3 } from "../../../data/desinations";
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 
 const Travellers = () => {
   return (

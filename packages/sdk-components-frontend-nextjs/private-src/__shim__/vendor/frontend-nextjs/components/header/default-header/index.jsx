@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 import { useEffect, useState } from "react";
 import MainMenu from "../MainMenu";
 import MobileMenu from "../MobileMenu";
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);

@@ -3,7 +3,7 @@
 
 import ModalVideo from "react-modal-video";
 import { Gallery, Item } from "react-photoswipe-gallery";
-import Link from "next/link";
+import Link from '../../../../../adapters/link';
 import React, { useState } from 'react'
 
 export default function GalleryOne({hotel}) {

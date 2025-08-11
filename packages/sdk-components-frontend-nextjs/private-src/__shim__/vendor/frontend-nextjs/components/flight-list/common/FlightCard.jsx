@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 import { FaPlane, FaArrowRight, FaClock, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import BaggageInfo from './BaggageInfo';
 import LayoverInfo from './LayoverInfo';

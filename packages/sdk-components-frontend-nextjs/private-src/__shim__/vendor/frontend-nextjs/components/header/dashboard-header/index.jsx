@@ -1,8 +1,8 @@
 
 'use client'
 
-import Image from './adapters/next-image';
-import Link from "next/link";
+import Image from '../../../../../../adapters/next-image';
+import Link from '../../../../../../adapters/link';
 import { useEffect, useState } from "react";
 import MainMenu from "../MainMenu";
 import MobileMenu from "../MobileMenu";

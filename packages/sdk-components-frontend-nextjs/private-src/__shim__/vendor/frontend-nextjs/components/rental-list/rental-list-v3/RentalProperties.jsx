@@ -4,8 +4,8 @@
 import rentalssData from "../../../data/rentals";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper";
-import Image from './adapters/next-image';
-import Link from "next/link";
+import Image from '../../../../../../adapters/next-image';
+import Link from '../../../../../../adapters/link';
 
 const RentalProperties = () => {
   return (

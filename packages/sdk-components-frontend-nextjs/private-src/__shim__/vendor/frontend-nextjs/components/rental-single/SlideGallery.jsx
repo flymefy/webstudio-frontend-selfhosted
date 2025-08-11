@@ -1,7 +1,7 @@
 
 'use client'
 
-import Image from './adapters/next-image';
+import Image from '../../../../../adapters/next-image';
 import { Gallery, Item } from "react-photoswipe-gallery";
 
 const SlideGallery = ({ rental }) => {

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 
 const FlightProperties = () => {
   const [searchParams, setSearchParams] = useState({

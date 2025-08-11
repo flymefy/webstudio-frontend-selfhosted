@@ -1,5 +1,5 @@
 'use client'
-import { useRouter } from "next/navigation";
+import { useRouter } from '../../../../../../adapters/next-navigation';
 import GuestSearch from "./GuestSearch";
 import LocationSearch from "./LocationSearch";
 import LocationSearch2 from "./LocationSearch2";

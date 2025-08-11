@@ -1,7 +1,7 @@
 "use client";
 
-import Image from './adapters/next-image';
-import Link from "next/link";
+import Image from '../../../../../adapters/next-image';
+import Link from '../../../../../adapters/link';
 
 const flightRoutes = [
   {

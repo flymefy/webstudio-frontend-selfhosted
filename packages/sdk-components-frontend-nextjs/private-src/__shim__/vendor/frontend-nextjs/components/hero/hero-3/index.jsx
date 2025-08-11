@@ -1,7 +1,7 @@
 "use client";
 
-import Image from './adapters/next-image';
-import CompleteSearchEngine from "@/components/common/CompleteSearchEngine";
+import Image from '../../../../../../adapters/next-image';
+import CompleteSearchEngine from '../../../components/common/CompleteSearchEngine';
 
 const index = ({ pageType = "general" }) => {
   return (

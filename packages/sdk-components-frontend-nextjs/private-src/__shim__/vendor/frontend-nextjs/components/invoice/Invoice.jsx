@@ -3,7 +3,7 @@
 
 
 import React from 'react'
-import Link from "next/link";
+import Link from '../../../../../adapters/link';
 export default function InvoiceComponent () {
     const contactData = [
         { url: "#", text: "www.gotirp.com" },

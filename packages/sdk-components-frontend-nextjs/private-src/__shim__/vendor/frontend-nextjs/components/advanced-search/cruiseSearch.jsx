@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from './adapters/link';
+import { Link } from '../../../../../adapters/link';
 import { DatePicker, TimePicker } from "antd";
 import dayjs from "dayjs";
 import axios from "axios";

@@ -1,7 +1,7 @@
 
 'use client'
 
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { testimonial2 } from "../../../data/testimonialData";

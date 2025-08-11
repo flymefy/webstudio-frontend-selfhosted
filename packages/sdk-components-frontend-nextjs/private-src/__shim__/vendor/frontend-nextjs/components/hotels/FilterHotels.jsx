@@ -1,7 +1,7 @@
 "use client";
 
-import Image from './adapters/next-image';
-import Link from "next/link";
+import Image from '../../../../../adapters/next-image';
+import Link from '../../../../../adapters/link';
 import Slider from "react-slick";
 import { hotelsData } from "../../data/hotels";
 import isTextMatched from "../../utils/isTextMatched";

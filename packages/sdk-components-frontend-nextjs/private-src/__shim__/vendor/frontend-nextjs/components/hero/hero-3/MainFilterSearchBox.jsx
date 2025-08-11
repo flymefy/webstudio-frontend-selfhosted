@@ -5,7 +5,7 @@ import { addCurrentTab } from "../../../features/hero/findPlaceSlice";
 import DateSearch from "../DateSearch";
 import GuestSearch from "./GuestSearch";
 import LocationSearch from "./LocationSearch";
-import { useRouter } from "next/navigation";
+import { useRouter } from '../../../../../../adapters/next-navigation';
 
 const MainFilterSearchBox = () => {
   const { tabs, currentTab } = useSelector((state) => state.hero) || {};

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from '../../../../../adapters/link';
 import { destinations5 } from "../../data/desinations";
 
 const TopDestinations = () => {

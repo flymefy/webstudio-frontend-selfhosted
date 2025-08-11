@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from './adapters/next-image';
+import Image from '../../../../../adapters/next-image';
 
 const DriverInformation = () => {
   const [formData, setFormData] = useState({

@@ -1,6 +1,6 @@
 import GuestSearch from "./GuestSearch";
 import DateSearch from "./DateSearch";
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 
 const index = () => {
   return (

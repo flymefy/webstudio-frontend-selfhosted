@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from './adapters/next-image';
+import Image from '../../../../../../adapters/next-image';
 
 const FlightResults = ({ results, loading, error, filters }) => {
   const [filteredResults, setFilteredResults] = useState([]);

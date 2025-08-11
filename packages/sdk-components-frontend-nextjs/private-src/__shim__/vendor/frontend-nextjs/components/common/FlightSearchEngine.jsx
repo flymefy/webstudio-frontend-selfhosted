@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useCallback, useRef, useEffect } from "react";
-import { Link, useNavigate, useLocation } from './adapters/link';
+import { Link, useNavigate, useLocation } from '../../../../../adapters/link';
 import { DatePicker, TimePicker } from "antd";
 import dayjs from "dayjs";
 import axios from "axios";
@@ -827,7 +827,7 @@ const FlightSearch = () => {
                                                         "space-between",
                                                       padding: "10px 15px",
                                                       flexDirection: "column",
-                                                      alignItems: "flex-start",
+                                                      // alignItems: "flex-start",
                                                     }}
                                                     onMouseEnter={(e) => {
                                                       e.currentTarget.style.backgroundColor =
@@ -1114,7 +1114,7 @@ const FlightSearch = () => {
                                                         "space-between",
                                                       padding: "10px 15px",
                                                       flexDirection: "column",
-                                                      alignItems: "flex-start",
+                                                      // alignItems: "flex-start",
                                                     }}
                                                     onMouseEnter={(e) => {
                                                       e.currentTarget.style.backgroundColor =

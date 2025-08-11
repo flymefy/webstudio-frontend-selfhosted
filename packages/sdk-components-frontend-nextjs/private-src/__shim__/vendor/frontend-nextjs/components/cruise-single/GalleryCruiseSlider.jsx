@@ -7,7 +7,7 @@ import { Gallery, Item } from "react-photoswipe-gallery";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Thumbs, Navigation } from "swiper";
 import "swiper/css/thumbs";
-import Image from './adapters/next-image';
+import Image from '../../../../../adapters/next-image';
 
 const GalleryCruiseSlider = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);

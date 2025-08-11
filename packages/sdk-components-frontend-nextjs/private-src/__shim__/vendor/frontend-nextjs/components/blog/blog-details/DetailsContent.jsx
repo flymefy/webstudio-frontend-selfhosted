@@ -1,6 +1,6 @@
 import Social2 from "../../common/social/Social2";
 import blogsData from "../../../data/blogs";
-import Link from "next/link";
+import Link from '../../../../../../adapters/link';
 
 const DetailsContent = () => {
   return (
