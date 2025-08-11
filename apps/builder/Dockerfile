@@ -13,10 +13,12 @@ COPY patches ./patches
 COPY apps ./apps
 COPY packages ./packages
 
-# Use workspace pnpm
-RUN corepack prepare pnpm@9.14.4 --activate && pnpm -w install --no-frozen-lockfile
+# Use workspace pnpm — install recursively to ensure all workspace node_modules and bins are linked
+RUN corepack prepare pnpm@9.14.4 --activate \
+  && pnpm -r install --no-frozen-lockfile \
+  && pnpm -r --filter "@webstudio-is/builder" install
 
-# Ensure local binaries are on PATH for scripts like `which remix`
+# Ensure local binaries are on PATH for scripts like `remix`
 ENV PATH=/app/node_modules/.bin:$PATH
 
 # Build all packages first, then the builder (explicit recursive run)
