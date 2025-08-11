@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: webstudio_db
+    environment:
+      POSTGRES_USER: webstudio
+      POSTGRES_PASSWORD: webstudio
+      POSTGRES_DB: webstudio
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  builder:
+    build:
+      context: .
+      dockerfile: apps/builder/Dockerfile
+    container_name: webstudio_builder
+    depends_on:
+      - db
+    environment:
+      # Prisma
+      DATABASE_URL: postgres://webstudio:webstudio@db:5432/webstudio
+      DIRECT_URL: postgres://webstudio:webstudio@db:5432/webstudio
+      # Node/Remix
+      NODE_ENV: production
+      PORT: 3000
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+    driver: local
