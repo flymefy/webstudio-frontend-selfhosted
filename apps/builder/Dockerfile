@@ -25,8 +25,12 @@ RUN corepack prepare pnpm@9.14.4 --activate \
 # Ensure local binaries are on PATH for scripts like `remix`
 ENV PATH=/app/node_modules/.bin:$PATH
 
-# Build all packages first, then the builder (explicit recursive run)
-RUN pnpm -w -r --filter "./packages/*" run build
+# Build all packages (skip vendor when disabled), then the builder
+RUN if [ "$WEBSTUDIO_VENDOR" = "disabled" ]; then \
+      pnpm -w -r --filter "./packages/*" --filter "!@webstudio-is/sdk-components-frontend-nextjs" run build; \
+    else \
+      pnpm -w -r --filter "./packages/*" run build; \
+    fi
 RUN pnpm -w --filter "@webstudio-is/builder" run build
 
 ENV NODE_ENV=production
