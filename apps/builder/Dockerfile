@@ -8,6 +8,7 @@ WORKDIR /app
 
 # Copy monorepo files
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY vite.sdk-components.config.ts ./
 COPY patches ./patches
 COPY apps ./apps
 COPY packages ./packages
