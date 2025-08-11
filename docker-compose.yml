@@ -15,6 +15,8 @@ services:
     build:
       context: .
       dockerfile: apps/builder/Dockerfile
+      args:
+        WEBSTUDIO_VENDOR: ${WEBSTUDIO_VENDOR:-disabled}
     container_name: webstudio_builder
     depends_on:
       - db
@@ -25,6 +27,7 @@ services:
       # Node/Remix
       NODE_ENV: production
       PORT: 3000
+      WEBSTUDIO_VENDOR: ${WEBSTUDIO_VENDOR:-disabled}
     ports:
       - "3000:3000"
     restart: unless-stopped

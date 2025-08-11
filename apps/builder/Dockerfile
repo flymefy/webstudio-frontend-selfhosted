@@ -1,6 +1,10 @@
 # syntax=docker/dockerfile:1
 FROM node:20-slim
 
+# Build args to control vendor registration
+ARG WEBSTUDIO_VENDOR=disabled
+ENV WEBSTUDIO_VENDOR=${WEBSTUDIO_VENDOR}
+
 # Install netcat for wait-for-db and enable corepack
 RUN apt-get update && apt-get install -y --no-install-recommends netcat-openbsd ca-certificates git which && rm -rf /var/lib/apt/lists/* && corepack enable
 

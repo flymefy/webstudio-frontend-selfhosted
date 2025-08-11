@@ -74,10 +74,6 @@ import { createInstanceElement } from "./elements";
 import { subscribeScrollbarSize } from "./scrollbar-width";
 import { compareMedia } from "@webstudio-is/css-engine";
 import { builderApi } from "~/shared/builder-api";
-import * as feComponents from "@webstudio-is/sdk-components-frontend-nextjs";
-import * as feMetas from "@webstudio-is/sdk-components-frontend-nextjs/metas";
-import { hooks as feHooks } from "@webstudio-is/sdk-components-frontend-nextjs/hooks";
-import * as feTemplates from "@webstudio-is/sdk-components-frontend-nextjs/templates";
 
 registerContainers();
 
@@ -210,20 +206,6 @@ const ContentEditMode = () => {
 
   useEffect(() => {
     const abortController = new AbortController();
-    subscribeScrollNewInstanceIntoView(
-      debounceEffect,
-      ref,
-      abortController.signal
-    );
-    const unsubscribeSelected = subscribeSelected(debounceEffect);
-    return () => {
-      unsubscribeSelected();
-      abortController.abort();
-    };
-  }, [debounceEffect]);
-
-  useEffect(() => {
-    const abortController = new AbortController();
     const options = { signal: abortController.signal };
     manageContentEditModeStyles(options);
     subscribeScrollbarSize(options);
@@ -271,12 +253,24 @@ export const Canvas = () => {
       templates: animationTemplates,
     });
     if (isVendorEnabled) {
-      registerComponentLibrary({
-        namespace: "@webstudio-is/sdk-components-frontend-nextjs",
-        components: feComponents,
-        metas: feMetas,
-        hooks: feHooks,
-        templates: feTemplates,
+      (async () => {
+        const [feComponents, feMetas, feHooksModule, feTemplates] =
+          await Promise.all([
+            import("@webstudio-is/sdk-components-frontend-nextjs"),
+            import("@webstudio-is/sdk-components-frontend-nextjs/metas"),
+            import("@webstudio-is/sdk-components-frontend-nextjs/hooks"),
+            import("@webstudio-is/sdk-components-frontend-nextjs/templates"),
+          ]);
+        registerComponentLibrary({
+          namespace: "@webstudio-is/sdk-components-frontend-nextjs",
+          components: feComponents as unknown as Record<string, unknown>,
+          metas: feMetas as unknown as Record<string, unknown>,
+          hooks: (feHooksModule as unknown as { hooks: unknown })
+            .hooks as unknown,
+          templates: feTemplates as unknown as Record<string, unknown>,
+        });
+      })().catch((error) => {
+        console.error("Failed to load vendor components", error);
       });
     }
   });
