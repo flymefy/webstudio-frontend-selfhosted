@@ -1,0 +1,5 @@
+@import url('/node_modules/antd/dist/reset.css');
+@import url('/node_modules/slick-carousel/slick/slick.css');
+@import url('/node_modules/slick-carousel/slick/slick-theme.css');
+@import url('/node_modules/photoswipe/dist/photoswipe.css');
+@import url('/node_modules/react-toastify/dist/ReactToastify.css');

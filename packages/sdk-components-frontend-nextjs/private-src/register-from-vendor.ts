@@ -39,7 +39,10 @@ function detectComponents(): string[] {
   }
   const patterns = vendorComponentsDirs
     .filter((dir) => existsSync(dir))
-    .map((dir) => `${dir}/**/*.tsx`);
+    .flatMap((dir) => [
+      `${dir}/**/*.tsx`,
+      `${dir}/**/*.jsx`,
+    ]);
   if (patterns.length === 0) return [];
   const files = fg.sync(patterns, {
     dot: false,
