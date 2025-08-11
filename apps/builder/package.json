@@ -18,7 +18,9 @@
     "dev": "pnpm build:http-client && remix vite:dev",
     "dev:auth": "pnpm build:http-client && DEBUG=OAuth2Strategy,ws:* remix vite:dev",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:clean": "WEBSTUDIO_VENDOR=disabled pnpm run build",
+    "start:clean": "WEBSTUDIO_VENDOR=disabled pnpm run start"
   },
   "dependencies": {
     "@atlaskit/pragmatic-drag-and-drop": "^1.5.2",

@@ -81,6 +81,10 @@ import * as feTemplates from "@webstudio-is/sdk-components-frontend-nextjs/templ
 
 registerContainers();
 
+const isVendorEnabled =
+  typeof process !== "undefined" &&
+  process?.env?.WEBSTUDIO_VENDOR?.toLowerCase?.() === "enabled";
+
 const FallbackComponent = ({ error, resetErrorBoundary }: FallbackProps) => {
   // try to recover from error when webstudio data is changed again
   useEffect(() => {
@@ -266,13 +270,15 @@ export const Canvas = () => {
       hooks: animationComponentHooks,
       templates: animationTemplates,
     });
-    registerComponentLibrary({
-      namespace: "@webstudio-is/sdk-components-frontend-nextjs",
-      components: feComponents,
-      metas: feMetas,
-      hooks: feHooks,
-      templates: feTemplates,
-    });
+    if (isVendorEnabled) {
+      registerComponentLibrary({
+        namespace: "@webstudio-is/sdk-components-frontend-nextjs",
+        components: feComponents,
+        metas: feMetas,
+        hooks: feHooks,
+        templates: feTemplates,
+      });
+    }
   });
 
   useMount(initCanvasApi);
